@@ -52,7 +52,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
   - Gas report awards: $3,750 USDC 
   - Judge + presort awards: $15,000 
   - Scout awards: $500 USDC 
-  - Mitigation review contest: $37,500 (*Opportunity goes to top 3 certified wardens based on placement in this contest.*)
+  - Mitigation review contest: $37,500 
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-12-gogopool-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
