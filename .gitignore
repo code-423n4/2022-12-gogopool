@@ -1,6 +1,7 @@
+artifacts
 artifacts-forge
 cache
-
+typechain-types
 
 # Logs
 logs
