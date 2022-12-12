@@ -72,6 +72,14 @@ _Note for C4 wardens: Anything included in the C4udit output is considered a pub
 
 GoGoPool is a decentralized liquid staking protocol on Avalanche. Our goal is to reduce the cost of running a Validator Node from 2000 AVAX -> 1000 AVAX by pairing Node Operators (users with hardware + 1000 AVAX) with Liquid Stakers (users just depositing AVAX).
 
+[![Twitter URL](https://img.shields.io/twitter/follow/GoGoPool_?style=social)](https://twitter.com/GoGoPool_)
+[![Website](https://img.shields.io/badge/Website-Check%20Us%20Out-orange)](https://www.gogopool.com/)
+[![Telegram](https://img.shields.io/badge/Telegram-gray?logo=telegram)](https://t.me/GoGoPoolAnnouncements)
+[![Discord chat][discord-badge]][discord-url]
+
+[discord-badge]: https://img.shields.io/badge/Discord-Join-green
+[discord-url]: https://discord.gg/7RJkvMew
+
 ## Basic functionality rundown
 
 Liquid Stakers deposit AVAX into an ERC4626 (TokenggAVAX) and recieve ggAVAX in return that increases in value compared to AVAX as rewards from staking are deposited.
