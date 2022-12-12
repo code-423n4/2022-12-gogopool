@@ -88,6 +88,14 @@ Staking rewards are split between Node Operators and Liquid Stakers with Node Op
 
 Node Operators are additionally incentivized with GGP Rewards. GGP is our protocol token that inflates 5% per year. Inflated tokens are distributed between Node Operators, Protocol DAO members and Multisig Oracle maintainers. Node Operators recieve GGP proportionally to how much GGP they have staked.
 
+[![Twitter URL](https://img.shields.io/twitter/follow/GoGoPool_?style=social)](https://twitter.com/GoGoPool_)
+[![Website](https://img.shields.io/badge/Website-Check%20Us%20Out-orange)](https://www.gogopool.com/)
+[![Telegram](https://img.shields.io/badge/Telegram-gray?logo=telegram)](https://t.me/GoGoPoolAnnouncements)
+[![Discord chat][discord-badge]][discord-url]
+
+[discord-badge]: https://img.shields.io/badge/Discord-Join-green
+[discord-url]: https://discord.gg/7RJkvMew
+
 # Scope
 
 This is the complete list of what's IN scope for this contest:
