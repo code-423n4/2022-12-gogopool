@@ -152,6 +152,7 @@ git clone https://github.com/code-423n4/2022-12-gogopool.git
 cd 2022-12-gogopool
 yarn
 brew install just
+brew install jq
 curl -L https://foundry.paradigm.xyz | bash
 foundryup
 forge install
