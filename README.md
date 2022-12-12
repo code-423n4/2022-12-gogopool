@@ -70,47 +70,60 @@ _Note for C4 wardens: Anything included in the C4udit output is considered a pub
 
 # Overview
 
-https://multisiglabs.notion.site/C4-Audit-Scope-f26381cf715b41df809e0e18963baa03
+GoGoPool is a decentralized liquid staking protocol on Avalanche. Our goal is to reduce the cost of running a Validator Node from 2000 AVAX -> 1000 AVAX by pairing Node Operators (users with hardware + 1000 AVAX) with Liquid Stakers (users just depositing AVAX).
+
+## Basic functionality rundown
+
+Liquid Stakers deposit AVAX into an ERC4626 (TokenggAVAX) and recieve ggAVAX in return that increases in value compared to AVAX as rewards from staking are deposited.
+
+Node Operators join the protocol by creating Minipools where they deposit AVAX, request some amount of Liquid Staker AVAX and put up 10% of the requested amount in GGP. GGP, our protocol token, is how we ensure rewards for Liquid Stakers if the Node Operator does not maintain sufficient uptime for Avalanche rewards.
+
+Staking rewards are split between Node Operators and Liquid Stakers with Node Operators getting 50% + a variable commission fee, and Liquid Stakers receiving the remainder.
+
+Node Operators are additionally incentivized with GGP Rewards. GGP is our protocol token that inflates 5% per year. Inflated tokens are distributed between Node Operators, Protocol DAO members and Multisig Oracle maintainers. Node Operators recieve GGP proportionally to how much GGP they have staked.
+
+More detail can be found in our [Notion document](https://multisiglabs.notion.site/C4-Audit-Scope-f26381cf715b41df809e0e18963baa03)
 
 # Scope
 
 This is the complete list of what's IN scope for this contest:
 
-| Contract                                                                                | SLOC | Purpose                                                                                                                                                                                                   | Libraries used |
-| --------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| [contracts/contract/Base.sol](/contracts/contract/Base.sol)                             | 8    | Foundation contract for network contracts                                                                                                                                                                 |
-| [contracts/contract/BaseAbstract.sol](/contracts/contract/BaseAbstract.sol)             | 145  | Abstract foundation contract for network contracts                                                                                                                                                        |
-| [contracts/contract/BaseUpgradeable.sol](/contracts/contract/BaseUpgradeable.sol)       | 9    |
-| [contracts/contract/ClaimNodeOp.sol](/contracts/contract/ClaimNodeOp.sol)               | 84   | Allows node operators to claim their GGP rewards                                                                                                                                                          |
-| [contracts/contract/ClaimProtocolDAO.sol](/contracts/contract/ClaimProtocolDAO.sol)     | 25   | Holds the Protocol DAOs GGP rewards                                                                                                                                                                       |
-| [contracts/contract/MinipoolManager.sol](/contracts/contract/MinipoolManager.sol)       | 429  | All functionality for creating and finishing a minipool                                                                                                                                                   |
-| [contracts/contract/MultisigManager.sol](/contracts/contract/MultisigManager.sol)       | 68   |
-| [contracts/contract/Ocyticus.sol](/contracts/contract/Ocyticus.sol)                     | 49   | Implements a protocol emergency pause feature                                                                                                                                                             |
-| [contracts/contract/Oracle.sol](/contracts/contract/Oracle.sol)                         | 41   |
-| [contracts/contract/ProtocolDAO.sol](/contracts/contract/ProtocolDAO.sol)               | 92   | Defines settings for the protocol                                                                                                                                                                         |
-| [contracts/contract/RewardsPool.sol](/contracts/contract/RewardsPool.sol)               | 153  | Holds the unreleased GGP tokens to be distributed each rewards cycle                                                                                                                                      |
-| [contracts/contract/Staking.sol](/contracts/contract/Staking.sol)                       | 256  | Allows a user to stake their GGP                                                                                                                                                                          |
-| [contracts/contract/Storage.sol](/contracts/contract/Storage.sol)                       | 113  | Contains generic getters/setters to access it's storage. Other contracts are "registered" with the storage contract as a "Network Contract", and can then use it to read and write typed key/value pairs. |
-| [contracts/contract/Vault.sol](/contracts/contract/Vault.sol)                           | 129  | Stores AVAX/ERC20 tokens on behalf of other network contracts                                                                                                                                             |
-| [contracts/contract/tokens/TokenGGP.sol](/contracts/contract/tokens/TokenGGP.sol)       | 8    | Implements a fixed-supply, non-upgradeable GGP utility token                                                                                                                                              |
-| [contracts/contract/tokens/TokenggAVAX.sol](/contracts/contract/tokens/TokenggAVAX.sol) | 174  | Implements an upgradeable (via OpenZeppelin proxy) ERC4626 yield-bearing liquid staking token                                                                                                             |
+<!-- prettier-ignore -->
+| Contract | SLOC | Purpose | Libraries used |
+| --- | :-: | --- |  --- |
+| [Base.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Base.sol) | 8 | Modifiers, helper methods and storage method wrappers shared between contracts |
+| [BaseUpgradeable.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/BaseUpgradeable.sol) | 9 | Openzeppelin upgradeable version of Base |
+| [BaseAbstract.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/BaseAbstract.sol) | 145 | Parent contract for Base and BaseUpgradeable |
+| [ClaimNodeOp.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/ClaimNodeOp.sol) | 84 | Claim contract for Node Operator GGP rewards |
+| [ClaimProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/ClaimProtocolDAO.sol) | 25 | Claim contract for Protocol DAO GGP rewards |
+| [MinipoolManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/MinipoolManager.sol) | 429  | Minipool functionality, e.g. creating, initiating staking |
+| [MultisigManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/MultisigManager.sol) | 68  | Multisig management functionality, e.g. enabling and disabling multisigs |
+| [Ocyticus.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Ocyticus.sol) | 49 | Protocol pause functionaltiy |
+| [Oracle.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Oracle.sol) | 41 | Price oracle for GGP token |
+| [ProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/ProtocolDAO.sol) | 92 | Defines and allows for modifying protocol settings |
+| [RewardsPool.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/RewardsPool.sol) | 153 | Handles GGP reward cycles including inflation and distribution |
+| [Staking.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Staking.sol) | 256 | Maintains information on stakers (anyone staking GGP or AVAX) |
+| [Storage.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Storage.sol) | 113 | Implements data separation pattern and maintains storage for all netowrk contracts with generic getters/setters. Contracts are registered with storage to define their ability to interact with stored variables |
+| [Vault.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Vault.sol) | 129  | Stores AVAX/ERC20 tokens on behalf of network contracts, to maintain their upgradeability |
+| [TokenGGP.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/tokens/TokenGGP.sol) | 8 | Fixed-supply, non-upgradeable ERC20 token |
+| [TokenggAVAX.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/tokens/TokenggAVAX.sol)  | 174  | An upgradeable (via OpenZeppelin proxy) ERC4626 yield-bearing liquid staking token |
+| [ERC20Upgradeable.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/tokens/upgradeable/ERC20Upgradeable.sol) | 119  | Upgradeable version of Solmate's ERC20 Token | 
+| [ERC4626Upgradeable.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/tokens/upgradeable/ERC4626Upgradeable.sol) | 102  | Upgradeable version of Solmate's ERC4626 Token |
 
 ## Out of scope
 
 This is the complete list of what's OUT of scope for this contest:
-| Contract | SLOC |
-| ----------------------------------------------------------------------------------------------------------------------------- | ---- |
-| [contracts/contract/tokens/upgradeable/ERC20Upgradeable.sol](/contracts/contract/tokens/upgradeable/ERC20Upgradeable.sol) | 119 |
-| [contracts/contract/tokens/upgradeable/ERC4626Upgradeable.sol](/contracts/contract/tokens/upgradeable/ERC4626Upgradeable.sol) | 102 |
-| [contracts/contract/utils/Multicall.sol](/contracts/contract/utils/Multicall.sol) | 37 |
-| [contracts/contract/utils/Multicall3.sol](/contracts/contract/utils/Multicall3.sol) | 157 |
-| [contracts/contract/utils/OneInchMock.sol](/contracts/contract/utils/OneInchMock.sol) | 13 |
-| [contracts/contract/utils/RialtoSimulator.sol](/contracts/contract/utils/RialtoSimulator.sol) | 91 |
-| [contracts/contract/utils/WAVAX.sol](/contracts/contract/utils/WAVAX.sol) | 20 |
-| [contracts/interface/IOneInch.sol](/contracts/interface/IOneInch.sol) | 5 |
-| [contracts/interface/IWAVAX.sol](/contracts/interface/IWAVAX.sol) | 13 |
-| [contracts/interface/IWithdrawer.sol](/contracts/interface/IWithdrawer.sol) | 4 |
-| [contracts/types/MinipoolStatus.sol](/contracts/types/MinipoolStatus.sol) | 10 |
+| Contract |
+| --- |
+| [Multicall.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/utils/Multicall.sol) |
+| [Multicall3.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/utils/Multicall3.sol) |
+| [OneInchMock.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/utils/OneInchMock.sol) |
+| [RialtoSimulator.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/utils/RialtoSimulator.sol) |
+| [WAVAX.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/utils/WAVAX.sol) |
+| [IOneInch.sol](/contracts/interface/IOneInch.sol) |
+| [IWAVAX.sol](/contracts/interface/IWAVAX.sol) |
+| [IWithdrawer.sol](/contracts/interface/IWithdrawer.sol) |
+| [MinipoolStatus.sol](/contracts/types/MinipoolStatus.sol) |
 
 # Additional Context
 
