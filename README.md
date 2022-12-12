@@ -91,39 +91,39 @@ This is the complete list of what's IN scope for this contest:
 <!-- prettier-ignore -->
 | Contract | SLOC | Purpose | Libraries used |
 | --- | :-: | --- |  --- |
-| [contracts/contract/Base.sol](/contracts/contract/Base.sol) | 8 | Modifiers, helper methods and storage method wrappers shared between contracts |
-| [contracts/contract/BaseUpgradeable.sol](/contracts/contract/BaseUpgradeable.sol) | 9 | Openzeppelin upgradeable version of Base |
-| [contracts/contract/BaseAbstract.sol](/contracts/contract/BaseAbstract.sol) | 145 | Parent contract for Base and BaseUpgradeable |
-| [contracts/contract/ClaimNodeOp.sol](/contracts/contract/ClaimNodeOp.sol) | 84 | Claim contract for Node Operator GGP rewards |
-| [contracts/contract/ClaimProtocolDAO.sol](/contracts/contract/ClaimProtocolDAO.sol) | 25 | Claim contract for Protocol DAO GGP rewards |
-| [contracts/contract/MinipoolManager.sol](/contracts/contract/MinipoolManager.sol) | 429  | Minipool functionality, e.g. creating, initiating staking |
-| [contracts/contract/MultisigManager.sol](/contracts/contract/MultisigManager.sol) | 68  | Multisig management functionality, e.g. enabling and disabling multisigs |
-| [contracts/contract/Ocyticus.sol](/contracts/contract/Ocyticus.sol) | 49 | Protocol pause functionaltiy |
-| [contracts/contract/Oracle.sol](/contracts/contract/Oracle.sol) | 41 | Price oracle for GGP token |
-| [contracts/contract/ProtocolDAO.sol](/contracts/contract/ProtocolDAO.sol) | 92 | Defines and allows for modifying protocol settings |
-| [contracts/contract/RewardsPool.sol](/contracts/contract/RewardsPool.sol) | 153 | Handles GGP reward cycles including inflation and distribution |
-| [contracts/contract/Staking.sol](/contracts/contract/Staking.sol) | 256 | Maintains information on stakers (anyone staking GGP or AVAX) |
-| [contracts/contract/Storage.sol](/contracts/contract/Storage.sol) | 113 | Implements data separation pattern and maintains storage for all netowrk contracts with generic getters/setters. Contracts are registered with storage to define their ability to interact with stored variables |
-| [contracts/contract/Vault.sol](/contracts/contract/Vault.sol) | 129  | Stores AVAX/ERC20 tokens on behalf of network contracts, to maintain their upgradeability |
-| [contracts/contract/tokens/TokenGGP.sol](/contracts/contract/tokens/TokenGGP.sol) | 8 | Fixed-supply, non-upgradeable ERC20 token |
-| [contracts/contract/tokens/TokenggAVAX.sol](/contracts/contract/tokens/TokenggAVAX.sol)  | 174  | An upgradeable (via OpenZeppelin proxy) ERC4626 yield-bearing liquid staking token |
-| [contracts/contract/tokens/upgradeable/ERC20Upgradeable.sol](/contracts/contract/tokens/upgradeable/ERC20Upgradeable.sol) | 119  | Upgradeable version of Solmate's ERC20 Token | 
-| [contracts/contract/tokens/upgradeable/ERC4626Upgradeable.sol](/contracts/contract/tokens/upgradeable/ERC4626Upgradeable.sol) | 102  | Upgradeable version of Solmate's ERC4626 Token |
+| [Base.sol](/contracts/contract/Base.sol) | 8 | Modifiers, helper methods and storage method wrappers shared between contracts |
+| [BaseUpgradeable.sol](/contracts/contract/BaseUpgradeable.sol) | 9 | Openzeppelin upgradeable version of Base |
+| [BaseAbstract.sol](/contracts/contract/BaseAbstract.sol) | 145 | Parent contract for Base and BaseUpgradeable |
+| [ClaimNodeOp.sol](/contracts/contract/ClaimNodeOp.sol) | 84 | Claim contract for Node Operator GGP rewards |
+| [ClaimProtocolDAO.sol](/contracts/contract/ClaimProtocolDAO.sol) | 25 | Claim contract for Protocol DAO GGP rewards |
+| [MinipoolManager.sol](/contracts/contract/MinipoolManager.sol) | 429  | Minipool functionality, e.g. creating, initiating staking |
+| [MultisigManager.sol](/contracts/contract/MultisigManager.sol) | 68  | Multisig management functionality, e.g. enabling and disabling multisigs |
+| [Ocyticus.sol](/contracts/contract/Ocyticus.sol) | 49 | Protocol pause functionaltiy |
+| [Oracle.sol](/contracts/contract/Oracle.sol) | 41 | Price oracle for GGP token |
+| [ProtocolDAO.sol](/contracts/contract/ProtocolDAO.sol) | 92 | Defines and allows for modifying protocol settings |
+| [RewardsPool.sol](/contracts/contract/RewardsPool.sol) | 153 | Handles GGP reward cycles including inflation and distribution |
+| [Staking.sol](/contracts/contract/Staking.sol) | 256 | Maintains information on stakers (anyone staking GGP or AVAX) |
+| [Storage.sol](/contracts/contract/Storage.sol) | 113 | Implements data separation pattern and maintains storage for all netowrk contracts with generic getters/setters. Contracts are registered with storage to define their ability to interact with stored variables |
+| [Vault.sol](/contracts/contract/Vault.sol) | 129  | Stores AVAX/ERC20 tokens on behalf of network contracts, to maintain their upgradeability |
+| [TokenGGP.sol](/contracts/contract/tokens/TokenGGP.sol) | 8 | Fixed-supply, non-upgradeable ERC20 token |
+| [TokenggAVAX.sol](/contracts/contract/tokens/TokenggAVAX.sol)  | 174  | An upgradeable (via OpenZeppelin proxy) ERC4626 yield-bearing liquid staking token |
+| [ERC20Upgradeable.sol](/contracts/contract/tokens/upgradeable/ERC20Upgradeable.sol) | 119  | Upgradeable version of Solmate's ERC20 Token | 
+| [ERC4626Upgradeable.sol](/contracts/contract/tokens/upgradeable/ERC4626Upgradeable.sol) | 102  | Upgradeable version of Solmate's ERC4626 Token |
 
 ## Out of scope
 
 This is the complete list of what's OUT of scope for this contest:
 | Contract |
 | --- |
-| [contracts/contract/utils/Multicall.sol](/contracts/contract/utils/Multicall.sol) |
-| [contracts/contract/utils/Multicall3.sol](/contracts/contract/utils/Multicall3.sol) |
-| [contracts/contract/utils/OneInchMock.sol](/contracts/contract/utils/OneInchMock.sol) |
-| [contracts/contract/utils/RialtoSimulator.sol](/contracts/contract/utils/RialtoSimulator.sol) |
-| [contracts/contract/utils/WAVAX.sol](/contracts/contract/utils/WAVAX.sol) |
-| [contracts/interface/IOneInch.sol](/contracts/interface/IOneInch.sol) |
-| [contracts/interface/IWAVAX.sol](/contracts/interface/IWAVAX.sol) |
-| [contracts/interface/IWithdrawer.sol](/contracts/interface/IWithdrawer.sol) |
-| [contracts/types/MinipoolStatus.sol](/contracts/types/MinipoolStatus.sol) |
+| [Multicall.sol](/contracts/contract/utils/Multicall.sol) |
+| [Multicall3.sol](/contracts/contract/utils/Multicall3.sol) |
+| [OneInchMock.sol](/contracts/contract/utils/OneInchMock.sol) |
+| [RialtoSimulator.sol](/contracts/contract/utils/RialtoSimulator.sol) |
+| [WAVAX.sol](/contracts/contract/utils/WAVAX.sol) |
+| [IOneInch.sol](/contracts/interface/IOneInch.sol) |
+| [IWAVAX.sol](/contracts/interface/IWAVAX.sol) |
+| [IWithdrawer.sol](/contracts/interface/IWithdrawer.sol) |
+| [MinipoolStatus.sol](/contracts/types/MinipoolStatus.sol) |
 
 # Additional Context
 
