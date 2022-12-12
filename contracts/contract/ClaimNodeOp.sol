@@ -10,7 +10,7 @@ import {Storage} from "./Storage.sol";
 import {TokenGGP} from "./tokens/TokenGGP.sol";
 import {Vault} from "./Vault.sol";
 
-import {ERC20} from "@rari-capital/solmate/src/mixins/ERC4626.sol";
+import {ERC20} from "@rari-capital/solmate/src/mixins/ERC20.sol";
 import {FixedPointMathLib} from "@rari-capital/solmate/src/utils/FixedPointMathLib.sol";
 
 /// @title Node Operators claiming GGP Rewards
