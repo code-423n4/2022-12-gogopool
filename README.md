@@ -70,19 +70,23 @@ _Note for C4 wardens: Anything included in the C4udit output is considered a pub
 
 # Overview
 
-GoGoPool is a decentralized liquid staking protocol on Avalanche. Our goal is to reduce the cost of running a Validator Node from 2000 AVAX -> 1000 AVAX by pairing Node Operators (users with hardware + 1000 AVAX) with Liquid Stakers (users just depositing AVAX).
+This is a contest to evaluate the entirety of the GoGoPool Protocol, a decentralized liquid staking protocol on Avalanche. Our mission is to be the easiest way to stake AVAX. GoGoPool allows users with hardware and 1000 AVAX to create a validator node in conjunction with funds deposited by liquid staking users.
 
-## Basic functionality rundown
+A detailed description of the protocol can be found in [Notion](https://multisiglabs.notion.site/C4-Audit-Scope-f26381cf715b41df809e0e18963baa03), but here's a short summary
+
+The protocol consists of two user groups, **Liquid Stakers** and **Node Operators**.
+
+## Liquid Stakers
 
 Liquid Stakers deposit AVAX into an ERC4626 (TokenggAVAX) and recieve ggAVAX in return that increases in value compared to AVAX as rewards from staking are deposited.
+
+## Node Operators
 
 Node Operators join the protocol by creating Minipools where they deposit AVAX, request some amount of Liquid Staker AVAX and put up 10% of the requested amount in GGP. GGP, our protocol token, is how we ensure rewards for Liquid Stakers if the Node Operator does not maintain sufficient uptime for Avalanche rewards.
 
 Staking rewards are split between Node Operators and Liquid Stakers with Node Operators getting 50% + a variable commission fee, and Liquid Stakers receiving the remainder.
 
 Node Operators are additionally incentivized with GGP Rewards. GGP is our protocol token that inflates 5% per year. Inflated tokens are distributed between Node Operators, Protocol DAO members and Multisig Oracle maintainers. Node Operators recieve GGP proportionally to how much GGP they have staked.
-
-More detail can be found in our [Notion document](https://multisiglabs.notion.site/C4-Audit-Scope-f26381cf715b41df809e0e18963baa03)
 
 # Scope
 
