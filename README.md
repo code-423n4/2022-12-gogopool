@@ -74,15 +74,43 @@ https://multisiglabs.notion.site/C4-Audit-Scope-f26381cf715b41df809e0e18963baa03
 
 # Scope
 
-_List all files in scope in the table below -- and feel free to add notes here to emphasize areas of focus._
+This is the complete list of what's IN scope for this contest:
 
-| Contract                    | SLOC | Purpose                | Libraries used                                           |
-| --------------------------- | ---- | ---------------------- | -------------------------------------------------------- |
-| contracts/folder/sample.sol | 123  | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| Contract                                                                                | SLOC | Purpose                                                                                                                                                                                                   | Libraries used |
+| --------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| [contracts/contract/Base.sol](/contracts/contract/Base.sol)                             | 8    | Foundation contract for network contracts                                                                                                                                                                 |
+| [contracts/contract/BaseAbstract.sol](/contracts/contract/BaseAbstract.sol)             | 145  | Abstract foundation contract for network contracts                                                                                                                                                        |
+| [contracts/contract/BaseUpgradeable.sol](/contracts/contract/BaseUpgradeable.sol)       | 9    |
+| [contracts/contract/ClaimNodeOp.sol](/contracts/contract/ClaimNodeOp.sol)               | 84   | Allows node operators to claim their GGP rewards                                                                                                                                                          |
+| [contracts/contract/ClaimProtocolDAO.sol](/contracts/contract/ClaimProtocolDAO.sol)     | 25   | Holds the Protocol DAOs GGP rewards                                                                                                                                                                       |
+| [contracts/contract/MinipoolManager.sol](/contracts/contract/MinipoolManager.sol)       | 429  | All functionality for creating and finishing a minipool                                                                                                                                                   |
+| [contracts/contract/MultisigManager.sol](/contracts/contract/MultisigManager.sol)       | 68   |
+| [contracts/contract/Ocyticus.sol](/contracts/contract/Ocyticus.sol)                     | 49   | Implements a protocol emergency pause feature                                                                                                                                                             |
+| [contracts/contract/Oracle.sol](/contracts/contract/Oracle.sol)                         | 41   |
+| [contracts/contract/ProtocolDAO.sol](/contracts/contract/ProtocolDAO.sol)               | 92   | Defines settings for the protocol                                                                                                                                                                         |
+| [contracts/contract/RewardsPool.sol](/contracts/contract/RewardsPool.sol)               | 153  | Holds the unreleased GGP tokens to be distributed each rewards cycle                                                                                                                                      |
+| [contracts/contract/Staking.sol](/contracts/contract/Staking.sol)                       | 256  | Allows a user to stake their GGP                                                                                                                                                                          |
+| [contracts/contract/Storage.sol](/contracts/contract/Storage.sol)                       | 113  | Contains generic getters/setters to access it's storage. Other contracts are "registered" with the storage contract as a "Network Contract", and can then use it to read and write typed key/value pairs. |
+| [contracts/contract/Vault.sol](/contracts/contract/Vault.sol)                           | 129  | Stores AVAX/ERC20 tokens on behalf of other network contracts                                                                                                                                             |
+| [contracts/contract/tokens/TokenGGP.sol](/contracts/contract/tokens/TokenGGP.sol)       | 8    | Implements a fixed-supply, non-upgradeable GGP utility token                                                                                                                                              |
+| [contracts/contract/tokens/TokenggAVAX.sol](/contracts/contract/tokens/TokenggAVAX.sol) | 174  | Implements an upgradeable (via OpenZeppelin proxy) ERC4626 yield-bearing liquid staking token                                                                                                             |
 
 ## Out of scope
 
-_List any files/contracts that are out of scope for this audit._
+This is the complete list of what's OUT of scope for this contest:
+| Contract | SLOC |
+| ----------------------------------------------------------------------------------------------------------------------------- | ---- |
+| [contracts/contract/tokens/upgradeable/ERC20Upgradeable.sol](/contracts/contract/tokens/upgradeable/ERC20Upgradeable.sol) | 119 |
+| [contracts/contract/tokens/upgradeable/ERC4626Upgradeable.sol](/contracts/contract/tokens/upgradeable/ERC4626Upgradeable.sol) | 102 |
+| [contracts/contract/utils/Multicall.sol](/contracts/contract/utils/Multicall.sol) | 37 |
+| [contracts/contract/utils/Multicall3.sol](/contracts/contract/utils/Multicall3.sol) | 157 |
+| [contracts/contract/utils/OneInchMock.sol](/contracts/contract/utils/OneInchMock.sol) | 13 |
+| [contracts/contract/utils/RialtoSimulator.sol](/contracts/contract/utils/RialtoSimulator.sol) | 91 |
+| [contracts/contract/utils/WAVAX.sol](/contracts/contract/utils/WAVAX.sol) | 20 |
+| [contracts/interface/IOneInch.sol](/contracts/interface/IOneInch.sol) | 5 |
+| [contracts/interface/IWAVAX.sol](/contracts/interface/IWAVAX.sol) | 13 |
+| [contracts/interface/IWithdrawer.sol](/contracts/interface/IWithdrawer.sol) | 4 |
+| [contracts/types/MinipoolStatus.sol](/contracts/types/MinipoolStatus.sol) | 10 |
 
 # Additional Context
 
