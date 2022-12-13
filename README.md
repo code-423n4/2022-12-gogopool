@@ -29,7 +29,7 @@ The protocol consists of two user groups, **Liquid Stakers** and **Node Operator
 
 ## Liquid Stakers
 
-Liquid Stakers deposit AVAX into an ERC4626 (TokenggAVAX) and recieve ggAVAX in return that increases in value compared to AVAX as rewards from staking are deposited.
+Liquid Stakers deposit AVAX into an ERC4626 (TokenggAVAX) and receive ggAVAX in return that increases in value compared to AVAX as rewards from staking are deposited.
 
 ## Node Operators
 
@@ -37,7 +37,7 @@ Node Operators join the protocol by creating Minipools where they deposit AVAX, 
 
 Staking rewards are split between Node Operators and Liquid Stakers with Node Operators getting 50% + a variable commission fee, and Liquid Stakers receiving the remainder.
 
-Node Operators are additionally incentivized with GGP Rewards. GGP is our protocol token that inflates 5% per year. Inflated tokens are distributed between Node Operators, Protocol DAO members and Multisig Oracle maintainers. Node Operators recieve GGP proportionally to how much GGP they have staked.
+Node Operators are additionally incentivized with GGP Rewards. GGP is our protocol token that inflates 5% per year. Inflated tokens are distributed between Node Operators, Protocol DAO members and Multisig Oracle maintainers. Node Operators receive GGP proportionally to how much GGP they have staked.
 
 [![Twitter URL](https://img.shields.io/twitter/follow/GoGoPool_?style=social)](https://twitter.com/GoGoPool_)
 [![Website](https://img.shields.io/badge/Website-Check%20Us%20Out-orange)](https://www.gogopool.com/)
@@ -61,7 +61,7 @@ This is the complete list of what's IN scope for this contest:
 | [ClaimProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/ClaimProtocolDAO.sol) | 25 | Claim contract for Protocol DAO GGP rewards | |
 | [MinipoolManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/MinipoolManager.sol) | 429 | Minipool functionality, e.g. creating, initiating staking | @solmate/ERC4626, FixedPointMathLib, ReentrancyGuard, SafeTransferLib |
 | [MultisigManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/MultisigManager.sol) | 68  | Multisig management functionality, e.g. enabling and disabling multisigs |
-| [Ocyticus.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Ocyticus.sol) | 49 | Protocol pause functionaltiy |
+| [Ocyticus.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Ocyticus.sol) | 49 | Protocol pause functionality |
 | [Oracle.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Oracle.sol) | 41 | Price oracle for GGP token |
 | [ProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/ProtocolDAO.sol) | 92 | Defines and allows for modifying protocol settings |
 | [RewardsPool.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/RewardsPool.sol) | 153 | Handles GGP reward cycles including inflation and distribution | @solmate/FixedPointMathLib |
@@ -87,12 +87,6 @@ This is the complete list of what's OUT of scope for this contest:
 | [IWAVAX.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/interface/IWAVAX.sol) |
 | [IWithdrawer.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/interface/IWithdrawer.sol) |
 | [MinipoolStatus.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/types/MinipoolStatus.sol) |
-
-# Additional Context
-
-_Describe any novel or unique curve logic or mathematical models implemented in the contracts_
-
-_Sponsor, please confirm/edit the information below._
 
 ## Scoping Details
 
