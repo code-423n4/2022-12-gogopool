@@ -149,4 +149,119 @@ contract ProtocolDAOTest is BaseTest {
 	function testGetTargetGGAVAXReserveRate() public {
 		assertEq(dao.getTargetGGAVAXReserveRate(), 0.1 ether);
 	}
+
+	function testRegisterContract() public {
+		address addr = randAddress();
+		string memory name = "newContract";
+		bytes32 testKey = "testKey";
+
+		vm.startPrank(addr);
+		vm.expectRevert(BaseAbstract.InvalidOrOutdatedContract.selector);
+		store.setBool(testKey, true);
+		vm.stopPrank();
+
+		vm.prank(guardian);
+		dao.registerContract(addr, name);
+
+		assertEq(store.getBool(keccak256(abi.encodePacked("contract.exists", addr))), true);
+		assertEq(store.getAddress(keccak256(abi.encodePacked("contract.address", name))), addr);
+		assertEq(store.getString(keccak256(abi.encodePacked("contract.name", addr))), name);
+
+		vm.prank(addr);
+		store.setBool(testKey, true);
+		assertEq(store.getBool(testKey), true);
+	}
+
+	function testRegisterContractNotGuardian() public {
+		address addr = randAddress();
+		string memory name = "newContract";
+
+		vm.startPrank(address(123));
+		vm.expectRevert(BaseAbstract.MustBeGuardian.selector);
+		dao.registerContract(addr, name);
+		vm.stopPrank();
+	}
+
+	function testUnregisterContract() public {
+		address addr = randAddress();
+		string memory name = "newContract";
+		bytes32 testKey = "testKey";
+
+		vm.prank(guardian);
+		dao.registerContract(addr, name);
+
+		assertEq(store.getBool(keccak256(abi.encodePacked("contract.exists", addr))), true);
+		assertEq(store.getAddress(keccak256(abi.encodePacked("contract.address", name))), addr);
+		assertEq(store.getString(keccak256(abi.encodePacked("contract.name", addr))), name);
+
+		vm.prank(addr);
+		store.setBool(testKey, true);
+		assertEq(store.getBool(testKey), true);
+
+		vm.prank(guardian);
+		dao.unregisterContract(addr);
+
+		assertEq(store.getBool(keccak256(abi.encodePacked("contract.exists", addr))), false);
+		assertEq(store.getAddress(keccak256(abi.encodePacked("contract.address", name))), address(0));
+		assertEq(store.getString(keccak256(abi.encodePacked("contract.name", addr))), "");
+
+		vm.startPrank(addr);
+		vm.expectRevert(BaseAbstract.InvalidOrOutdatedContract.selector);
+		store.setBool(testKey, true);
+		vm.stopPrank();
+	}
+
+	function testUnregisterContractNotGuardian() public {
+		address addr = randAddress();
+
+		vm.startPrank(address(123));
+		vm.expectRevert(BaseAbstract.MustBeGuardian.selector);
+		dao.unregisterContract(addr);
+	}
+
+	function testUpgradeExistingContract() public {
+		address addr = randAddress();
+		string memory name = "newContract";
+
+		address existingAddr = randAddress();
+		string memory existingName = "existingName";
+
+		bytes32 testKey = "testKey";
+
+		vm.prank(guardian);
+		dao.registerContract(existingAddr, existingName);
+		assertEq(store.getBool(keccak256(abi.encodePacked("contract.exists", existingAddr))), true);
+		assertEq(store.getAddress(keccak256(abi.encodePacked("contract.address", existingName))), existingAddr);
+		assertEq(store.getString(keccak256(abi.encodePacked("contract.name", existingAddr))), existingName);
+
+		vm.prank(guardian);
+		dao.upgradeExistingContract(addr, name, existingAddr);
+		assertEq(store.getBool(keccak256(abi.encodePacked("contract.exists", addr))), true);
+		assertEq(store.getAddress(keccak256(abi.encodePacked("contract.address", name))), addr);
+		assertEq(store.getString(keccak256(abi.encodePacked("contract.name", addr))), name);
+
+		assertEq(store.getBool(keccak256(abi.encodePacked("contract.exists", existingAddr))), false);
+		assertEq(store.getAddress(keccak256(abi.encodePacked("contract.address", existingName))), address(0));
+		assertEq(store.getString(keccak256(abi.encodePacked("contract.name", existingAddr))), "");
+
+		vm.startPrank(existingAddr);
+		vm.expectRevert(BaseAbstract.InvalidOrOutdatedContract.selector);
+		store.setBool(testKey, true);
+		vm.stopPrank();
+
+		vm.prank(addr);
+		store.setBool(testKey, true);
+		assertEq(store.getBool(testKey), true);
+	}
+
+	function testUpgradeExistingContractNotGuardian() public {
+		address addr = randAddress();
+		string memory name = "newContract";
+		address existingAddr = randAddress();
+
+		vm.startPrank(address(123));
+		vm.expectRevert(BaseAbstract.MustBeGuardian.selector);
+		dao.upgradeExistingContract(addr, name, existingAddr);
+		vm.stopPrank();
+	}
 }

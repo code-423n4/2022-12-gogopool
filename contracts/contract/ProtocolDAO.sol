@@ -166,4 +166,26 @@ contract ProtocolDAO is Base {
 	function getTargetGGAVAXReserveRate() external view returns (uint256) {
 		return getUint(keccak256("ProtocolDAO.TargetGGAVAXReserveRate"));
 	}
+
+	function registerContract(address addr, string memory name) public onlyGuardian {
+		setBool(keccak256(abi.encodePacked("contract.exists", addr)), true);
+		setAddress(keccak256(abi.encodePacked("contract.address", name)), addr);
+		setString(keccak256(abi.encodePacked("contract.name", addr)), name);
+	}
+
+	function unregisterContract(address addr) public onlyGuardian {
+		string memory name = getContractName(addr);
+		deleteBool(keccak256(abi.encodePacked("contract.exists", addr)));
+		deleteAddress(keccak256(abi.encodePacked("contract.address", name)));
+		deleteString(keccak256(abi.encodePacked("contract.name", addr)));
+	}
+
+	function upgradeExistingContract(
+		address newAddr,
+		string memory newName,
+		address existingAddr
+	) external onlyGuardian {
+		registerContract(newAddr, newName);
+		unregisterContract(existingAddr);
+	}
 }
