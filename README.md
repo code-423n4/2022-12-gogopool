@@ -54,39 +54,39 @@ This is the complete list of what's IN scope for this contest:
 <!-- prettier-ignore -->
 | Contract | SLOC | Purpose | Libraries used |
 | --- | :-: | --- |  --- |
-| [Base.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Base.sol) | 8 | Modifiers, helper methods and storage method wrappers shared between contracts | |
-| [BaseUpgradeable.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/BaseUpgradeable.sol) | 9 | Openzeppelin upgradeable version of Base | @openzeppelin/Initializable |
-| [BaseAbstract.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/BaseAbstract.sol) | 145 | Parent contract for Base and BaseUpgradeable | |
-| [ClaimNodeOp.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/ClaimNodeOp.sol) | 84 | Claim contract for Node Operator GGP rewards | @solmate/ERC4626, FixedPointMathLib |
-| [ClaimProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/ClaimProtocolDAO.sol) | 25 | Claim contract for Protocol DAO GGP rewards | |
-| [MinipoolManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/MinipoolManager.sol) | 429 | Minipool functionality, e.g. creating, initiating staking | @solmate/ERC4626, FixedPointMathLib, ReentrancyGuard, SafeTransferLib |
-| [MultisigManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/MultisigManager.sol) | 68  | Multisig management functionality, e.g. enabling and disabling multisigs |
-| [Ocyticus.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Ocyticus.sol) | 49 | Protocol pause functionaltiy |
-| [Oracle.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Oracle.sol) | 41 | Price oracle for GGP token |
-| [ProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/ProtocolDAO.sol) | 92 | Defines and allows for modifying protocol settings |
-| [RewardsPool.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/RewardsPool.sol) | 153 | Handles GGP reward cycles including inflation and distribution | @solmate/FixedPointMathLib |
-| [Staking.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Staking.sol) | 256 | Maintains information on stakers (anyone staking GGP or AVAX) | @solmate/ERC20, FixedPointMathLib, SafeTransferLib |
-| [Storage.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Storage.sol) | 113 | Implements data separation pattern and maintains storage for all netowrk contracts with generic getters/setters. Contracts are registered with storage to define their ability to interact with stored variables | |
-| [Vault.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/Vault.sol) | 129  | Stores AVAX/ERC20 tokens on behalf of network contracts, to maintain their upgradeability | @solmate/ERC20, ReentrancyGuard, SafeTransferLib |
-| [TokenGGP.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/tokens/TokenGGP.sol) | 8 | Fixed-supply, non-upgradeable ERC20 token | @solmate/ERC20 |
-| [TokenggAVAX.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/tokens/TokenggAVAX.sol)  | 174  | An upgradeable (via OpenZeppelin proxy) ERC4626 yield-bearing liquid staking token | @openzeppelin/Initializable, UUPSUpgradeable + @solmate/ERC20, FixedPointMathLib, SafeCastLib, SafeTransferLib |
-| [ERC20Upgradeable.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/tokens/upgradeable/ERC20Upgradeable.sol) | 119  | Upgradeable version of Solmate's ERC20 Token | |
-| [ERC4626Upgradeable.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/tokens/upgradeable/ERC4626Upgradeable.sol) | 102  | Upgradeable version of Solmate's ERC4626 Token |@solmate/ERC20, FixedPointMathLib, SafeTransferLib, Initializable |
+| [Base.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Base.sol) | 8 | Modifiers, helper methods and storage method wrappers shared between contracts | |
+| [BaseUpgradeable.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/BaseUpgradeable.sol) | 9 | Openzeppelin upgradeable version of Base | @openzeppelin/Initializable |
+| [BaseAbstract.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/BaseAbstract.sol) | 145 | Parent contract for Base and BaseUpgradeable | |
+| [ClaimNodeOp.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/ClaimNodeOp.sol) | 84 | Claim contract for Node Operator GGP rewards | @solmate/ERC4626, FixedPointMathLib |
+| [ClaimProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/ClaimProtocolDAO.sol) | 25 | Claim contract for Protocol DAO GGP rewards | |
+| [MinipoolManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/MinipoolManager.sol) | 429 | Minipool functionality, e.g. creating, initiating staking | @solmate/ERC4626, FixedPointMathLib, ReentrancyGuard, SafeTransferLib |
+| [MultisigManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/MultisigManager.sol) | 68  | Multisig management functionality, e.g. enabling and disabling multisigs |
+| [Ocyticus.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Ocyticus.sol) | 49 | Protocol pause functionaltiy |
+| [Oracle.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Oracle.sol) | 41 | Price oracle for GGP token |
+| [ProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/ProtocolDAO.sol) | 92 | Defines and allows for modifying protocol settings |
+| [RewardsPool.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/RewardsPool.sol) | 153 | Handles GGP reward cycles including inflation and distribution | @solmate/FixedPointMathLib |
+| [Staking.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Staking.sol) | 256 | Maintains information on stakers (anyone staking GGP or AVAX) | @solmate/ERC20, FixedPointMathLib, SafeTransferLib |
+| [Storage.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Storage.sol) | 113 | Implements data separation pattern and maintains storage for all netowrk contracts with generic getters/setters. Contracts are registered with storage to define their ability to interact with stored variables | |
+| [Vault.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Vault.sol) | 129  | Stores AVAX/ERC20 tokens on behalf of network contracts, to maintain their upgradeability | @solmate/ERC20, ReentrancyGuard, SafeTransferLib |
+| [TokenGGP.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/tokens/TokenGGP.sol) | 8 | Fixed-supply, non-upgradeable ERC20 token | @solmate/ERC20 |
+| [TokenggAVAX.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/tokens/TokenggAVAX.sol)  | 174  | An upgradeable (via OpenZeppelin proxy) ERC4626 yield-bearing liquid staking token | @openzeppelin/Initializable, UUPSUpgradeable + @solmate/ERC20, FixedPointMathLib, SafeCastLib, SafeTransferLib |
+| [ERC20Upgradeable.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/tokens/upgradeable/ERC20Upgradeable.sol) | 119  | Upgradeable version of Solmate's ERC20 Token | |
+| [ERC4626Upgradeable.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/tokens/upgradeable/ERC4626Upgradeable.sol) | 102  | Upgradeable version of Solmate's ERC4626 Token |@solmate/ERC20, FixedPointMathLib, SafeTransferLib, Initializable |
 
 ## Out of scope
 
 This is the complete list of what's OUT of scope for this contest:
 | Contract |
 | --- |
-| [Multicall.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/utils/Multicall.sol) |
-| [Multicall3.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/utils/Multicall3.sol) |
-| [OneInchMock.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/utils/OneInchMock.sol) |
-| [RialtoSimulator.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/utils/RialtoSimulator.sol) |
-| [WAVAX.sol](https://github.com/code-423n4/2022-12-gogopool/blob/gogopool/contracts/contract/utils/WAVAX.sol) |
-| [IOneInch.sol](/contracts/interface/IOneInch.sol) |
-| [IWAVAX.sol](/contracts/interface/IWAVAX.sol) |
-| [IWithdrawer.sol](/contracts/interface/IWithdrawer.sol) |
-| [MinipoolStatus.sol](/contracts/types/MinipoolStatus.sol) |
+| [Multicall.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/utils/Multicall.sol) |
+| [Multicall3.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/utils/Multicall3.sol) |
+| [OneInchMock.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/utils/OneInchMock.sol) |
+| [RialtoSimulator.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/utils/RialtoSimulator.sol) |
+| [WAVAX.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/utils/WAVAX.sol) |
+| [IOneInch.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/interface/IOneInch.sol) |
+| [IWAVAX.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/interface/IWAVAX.sol) |
+| [IWithdrawer.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/interface/IWithdrawer.sol) |
+| [MinipoolStatus.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/types/MinipoolStatus.sol) |
 
 # Additional Context
 
