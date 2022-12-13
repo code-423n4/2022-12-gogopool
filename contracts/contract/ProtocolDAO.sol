@@ -167,12 +167,19 @@ contract ProtocolDAO is Base {
 		return getUint(keccak256("ProtocolDAO.TargetGGAVAXReserveRate"));
 	}
 
+	//*** Contract Registration ***
+
+	/// @notice Register a new contract with Storage
+	/// @param addr Contract address to register
+	/// @param name Contract name to register
 	function registerContract(address addr, string memory name) public onlyGuardian {
 		setBool(keccak256(abi.encodePacked("contract.exists", addr)), true);
 		setAddress(keccak256(abi.encodePacked("contract.address", name)), addr);
 		setString(keccak256(abi.encodePacked("contract.name", addr)), name);
 	}
 
+	/// @notice Unregister a contract with Storage
+	/// @param addr Contract address to unregister
 	function unregisterContract(address addr) public onlyGuardian {
 		string memory name = getContractName(addr);
 		deleteBool(keccak256(abi.encodePacked("contract.exists", addr)));
@@ -180,6 +187,10 @@ contract ProtocolDAO is Base {
 		deleteString(keccak256(abi.encodePacked("contract.name", addr)));
 	}
 
+	/// @notice Upgrade a contract by unregistering the existing address, and registring a new address and name
+	/// @param newAddr Address of the new contract
+	/// @param nweName Name of the new contract
+	/// @param existingAddr Address of the existing contract to be deleted
 	function upgradeExistingContract(
 		address newAddr,
 		string memory newName,
