@@ -189,7 +189,7 @@ contract ProtocolDAO is Base {
 
 	/// @notice Upgrade a contract by unregistering the existing address, and registring a new address and name
 	/// @param newAddr Address of the new contract
-	/// @param nweName Name of the new contract
+	/// @param newName Name of the new contract
 	/// @param existingAddr Address of the existing contract to be deleted
 	function upgradeExistingContract(
 		address newAddr,
