@@ -1,0 +1,17 @@
+[profile.default]
+test = "test"
+out = "artifacts-forge"
+optimizer = true
+optimizer_runs = 800
+gas-reports = ["*"]
+solc-version = "0.8.17"
+verbosity = 2
+# Setting sender to magic forge deployer addr, makes things easier
+sender = "0xb4c79daB8f259C7Aee6E5b2Aa729821864227e84"
+tx_origin = "0xb4c79daB8f259C7Aee6E5b2Aa729821864227e84"
+remappings = [
+	'@openzeppelin/=node_modules/@openzeppelin/'
+]
+# eth-rpc-url = "https://mainnet.infura.io"
+
+# See more config options https://github.com/gakonst/foundry/tree/master/config

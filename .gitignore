@@ -1,3 +1,9 @@
+artifacts
+artifacts-forge
+cache
+typechain-types
+.openzeppelin
+
 # Logs
 logs
 *.log
@@ -70,7 +76,6 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
