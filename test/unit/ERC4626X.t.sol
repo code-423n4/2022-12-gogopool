@@ -14,8 +14,6 @@ contract xERC4626Test is Test {
 	TokenggAVAX public xToken;
 	MockERC20 public token;
 
-	// uint256 public xToken.rewardsCycleLength() = 14 days;
-
 	function setUp() public {
 		// Using mock so it has public mint and burn, required for the tests
 		token = new MockERC20("WAVAX", "WAVAX", 18);
