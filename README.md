@@ -19,6 +19,8 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 _Note for C4 wardens: Anything included in the C4udit output is considered a publicly known issue and is ineligible for awards._
 
+_Same goes for Slither output and our [known issues](https://multisiglabs.notion.site/Known-Issues-0b7ffb3ac0494f2f8d6805dcd90e774d)._
+
 # Overview
 
 This is a contest to evaluate the entirety of the GoGoPool Protocol, a decentralized liquid staking protocol on Avalanche. Our mission is to be the easiest way to stake AVAX. GoGoPool allows users with hardware and 1000 AVAX to create a validator node in conjunction with funds deposited by liquid staking users.
@@ -63,7 +65,7 @@ This is the complete list of what's IN scope for this contest:
 | [MultisigManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/MultisigManager.sol) | 68  | Multisig management functionality, e.g. enabling and disabling multisigs |
 | [Ocyticus.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Ocyticus.sol) | 49 | Protocol pause functionality |
 | [Oracle.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Oracle.sol) | 41 | Price oracle for GGP token |
-| [ProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/ProtocolDAO.sol) | 92 | Defines and allows for modifying protocol settings |
+| [ProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/ProtocolDAO.sol) | 111 | Defines and allows for modifying protocol settings |
 | [RewardsPool.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/RewardsPool.sol) | 153 | Handles GGP reward cycles including inflation and distribution | @solmate/FixedPointMathLib |
 | [Staking.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Staking.sol) | 256 | Maintains information on stakers (anyone staking GGP or AVAX) | @solmate/ERC20, FixedPointMathLib, SafeTransferLib |
 | [Storage.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Storage.sol) | 113 | Implements data separation pattern and maintains storage for all netowrk contracts with generic getters/setters. Contracts are registered with storage to define their ability to interact with stored variables | |
@@ -92,12 +94,12 @@ This is the complete list of what's OUT of scope for this contest:
 
 ```
 - If you have a public code repo, please share it here:  N/A
-- How many contracts are in scope?:   23
-- Total SLoC for these contracts?:  2063
+- How many contracts are in scope?:   18
+- Total SLoC for these contracts?:  2023
 - How many external imports are there?: 25 dependencies external to our code
 - How many separate interfaces and struct definitions are there for the contracts within scope?:  5
 - Does most of your code generally use composition or inheritance?:   inheritance
-- How many external calls?:   0
+- How many external calls?:   13
 - What is the overall line coverage percentage provided by your tests?:  77%
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   true
 - Please describe required context:   Documentation at Notion: https://multisiglabs.notion.site/C4-Audit-Scope-f26381cf715b41df809e0e18963baa03
