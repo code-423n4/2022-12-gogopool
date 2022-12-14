@@ -173,7 +173,7 @@ contract ProtocolDAOTest is BaseTest {
 	}
 
 	function testGetMinipoolCancelMoratoriumSeconds() public {
-		assertEq(dao.getMinipoolCancelMoratoriumSeconds(), 5 days);
+		assertEq(dao.getMinipoolCancelMoratoriumSeconds(), 5);
 	}
 
 	function testRegisterContract() public {
