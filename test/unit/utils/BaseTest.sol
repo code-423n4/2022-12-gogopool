@@ -163,6 +163,7 @@ abstract contract BaseTest is Test {
 		store.setUint(keccak256("ProtocolDAO.MinipoolMaxAVAXAssignment"), 10_000 ether);
 		store.setUint(keccak256("ProtocolDAO.MinipoolMinAVAXAssignment"), 1_000 ether);
 		store.setUint(keccak256("ProtocolDAO.ExpectedAVAXRewardsRate"), 0.1 ether);
+		store.setUint(keccak256("ProtocolDAO.MinipoolCancelMoratoriumSeconds"), 5 seconds);
 
 		// Staking
 		store.setUint(keccak256("ProtocolDAO.MaxCollateralizationRatio"), 1.5 ether);

@@ -7,6 +7,15 @@ import {Storage} from "./Storage.sol";
 
 /// @title Settings for the Protocol
 contract ProtocolDAO is Base {
+	error ValueNotWithinRange();
+
+	modifier valueNotGreaterThanOne(uint256 setterValue) {
+		if (setterValue > 1 ether) {
+			revert ValueNotWithinRange();
+		}
+		_;
+	}
+
 	constructor(Storage storageAddress) Base(storageAddress) {
 		version = 1;
 	}
@@ -40,6 +49,7 @@ contract ProtocolDAO is Base {
 		setUint(keccak256("ProtocolDAO.MinipoolMaxAVAXAssignment"), 10_000 ether);
 		setUint(keccak256("ProtocolDAO.MinipoolMinAVAXAssignment"), 1_000 ether);
 		setUint(keccak256("ProtocolDAO.ExpectedAVAXRewardsRate"), 0.1 ether); // Annual rate as pct of 1 avax
+		setUint(keccak256("ProtocolDAO.MinipoolCancelMoratoriumSeconds"), 5 days);
 
 		// Staking
 		setUint(keccak256("ProtocolDAO.MaxCollateralizationRatio"), 1.5 ether);
@@ -94,7 +104,7 @@ contract ProtocolDAO is Base {
 	}
 
 	/// @notice Set the percentage a contract is owed for a rewards cycle
-	function setClaimingContractPct(string memory claimingContract, uint256 decimal) public onlyGuardian {
+	function setClaimingContractPct(string memory claimingContract, uint256 decimal) public onlyGuardian valueNotGreaterThanOne(decimal) {
 		setUint(keccak256(abi.encodePacked("ProtocolDAO.ClaimingContractPct.", claimingContract)), decimal);
 	}
 
@@ -136,15 +146,20 @@ contract ProtocolDAO is Base {
 		return getUint(keccak256("ProtocolDAO.MinipoolMinAVAXAssignment"));
 	}
 
-	/// @notice The expected rewards rate for validating Avalanche's P-chain
-	function getExpectedAVAXRewardsRate() public view returns (uint256) {
-		return getUint(keccak256("ProtocolDAO.ExpectedAVAXRewardsRate"));
+	/// @notice The user must wait this amount of time before they can cancel their minipool
+	function getMinipoolCancelMoratoriumSeconds() public view returns (uint256) {
+		return getUint(keccak256("ProtocolDAO.MinipoolCancelMoratoriumSeconds"));
 	}
 
 	/// @notice Set the rewards rate for validating Avalanche's p-chain
 	/// @dev Used for testing
-	function setExpectedAVAXRewardsRate(uint256 rate) public onlyMultisig {
+	function setExpectedAVAXRewardsRate(uint256 rate) public onlyMultisig valueNotGreaterThanOne(rate) {
 		setUint(keccak256("ProtocolDAO.ExpectedAVAXRewardsRate"), rate);
+	}
+
+	/// @notice The expected rewards rate for validating Avalanche's P-chain
+	function getExpectedAVAXRewardsRate() public view returns (uint256) {
+		return getUint(keccak256("ProtocolDAO.ExpectedAVAXRewardsRate"));
 	}
 
 	//*** Staking ***

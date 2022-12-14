@@ -108,6 +108,7 @@ contract MinipoolManagerTest is BaseTest {
 		assertEq(mp.owner, address(nodeOp));
 
 		//check that making the same minipool with this id will reset the minipool data
+		skip(5 seconds); //cancellation moratorium
 		minipoolMgr.cancelMinipool(nodeID);
 		minipoolMgr.createMinipool{value: nopAvaxAmount}(nodeID, 3 weeks, delegationFee, avaxAssignmentRequest);
 		int256 minipoolIndex1 = minipoolMgr.getIndexOf(nodeID);
@@ -144,6 +145,14 @@ contract MinipoolManagerTest is BaseTest {
 		//will fail
 		int256 minipoolIndex = minipoolMgr.getIndexOf(mp1.nodeID);
 		store.setUint(keccak256(abi.encodePacked("minipool.item", minipoolIndex, ".status")), uint256(MinipoolStatus.Error));
+		vm.prank(nodeOp);
+
+		//will fail
+		vm.expectRevert(MinipoolManager.CancellationTooEarly.selector);
+		minipoolMgr.cancelMinipool(mp1.nodeID);
+
+		skip(5 seconds); //cancellation moratorium
+
 		vm.prank(nodeOp);
 		vm.expectRevert(MinipoolManager.InvalidStateTransition.selector);
 		minipoolMgr.cancelMinipool(mp1.nodeID);
