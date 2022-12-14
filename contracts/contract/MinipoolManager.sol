@@ -70,6 +70,7 @@ contract MinipoolManager is Base, ReentrancyGuard, IWithdrawer {
 	error InvalidStateTransition();
 	error MinipoolNotFound();
 	error OnlyOwner();
+	error CancellationTooEarly();
 
 	event GGPSlashed(address indexed nodeID, uint256 ggp);
 	event MinipoolStatusChanged(address indexed nodeID, MinipoolStatus indexed status);
@@ -270,8 +271,14 @@ contract MinipoolManager is Base, ReentrancyGuard, IWithdrawer {
 	/// @notice Owner of a minipool can cancel the (prelaunch) minipool
 	/// @param nodeID 20-byte Avalanche node ID the Owner registered with
 	function cancelMinipool(address nodeID) external nonReentrant {
+		Staking staking = Staking(getContractAddress("Staking"));
+		ProtocolDAO dao = ProtocolDAO(getContractAddress("ProtocolDAO"));
 		int256 index = requireValidMinipool(nodeID);
 		onlyOwner(index);
+		// make sure they meet the wait period requirement
+		if (block.timestamp - staking.getRewardsStartTime(msg.sender) < dao.getMinipoolCancelMoratoriumSeconds()) {
+			revert CancellationTooEarly();
+		}
 		_cancelMinipoolAndReturnFunds(nodeID, index);
 	}
 

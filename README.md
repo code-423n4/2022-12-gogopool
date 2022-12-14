@@ -61,11 +61,11 @@ This is the complete list of what's IN scope for this contest:
 | [BaseAbstract.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/BaseAbstract.sol) | 145 | Parent contract for Base and BaseUpgradeable | |
 | [ClaimNodeOp.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/ClaimNodeOp.sol) | 84 | Claim contract for Node Operator GGP rewards | @solmate/ERC4626, FixedPointMathLib |
 | [ClaimProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/ClaimProtocolDAO.sol) | 25 | Claim contract for Protocol DAO GGP rewards | |
-| [MinipoolManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/MinipoolManager.sol) | 429 | Minipool functionality, e.g. creating, initiating staking | @solmate/ERC4626, FixedPointMathLib, ReentrancyGuard, SafeTransferLib |
+| [MinipoolManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/MinipoolManager.sol) | 435 | Minipool functionality, e.g. creating, initiating staking | @solmate/ERC4626, FixedPointMathLib, ReentrancyGuard, SafeTransferLib |
 | [MultisigManager.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/MultisigManager.sol) | 68  | Multisig management functionality, e.g. enabling and disabling multisigs |
 | [Ocyticus.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Ocyticus.sol) | 49 | Protocol pause functionality |
 | [Oracle.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Oracle.sol) | 41 | Price oracle for GGP token |
-| [ProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/ProtocolDAO.sol) | 111 | Defines and allows for modifying protocol settings |
+| [ProtocolDAO.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/ProtocolDAO.sol) | 122 | Defines and allows for modifying protocol settings |
 | [RewardsPool.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/RewardsPool.sol) | 153 | Handles GGP reward cycles including inflation and distribution | @solmate/FixedPointMathLib |
 | [Staking.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Staking.sol) | 256 | Maintains information on stakers (anyone staking GGP or AVAX) | @solmate/ERC20, FixedPointMathLib, SafeTransferLib |
 | [Storage.sol](https://github.com/code-423n4/2022-12-gogopool/blob/main/contracts/contract/Storage.sol) | 113 | Implements data separation pattern and maintains storage for all netowrk contracts with generic getters/setters. Contracts are registered with storage to define their ability to interact with stored variables | |
@@ -95,7 +95,7 @@ This is the complete list of what's OUT of scope for this contest:
 ```
 - If you have a public code repo, please share it here:  N/A
 - How many contracts are in scope?:   18
-- Total SLoC for these contracts?:  2023
+- Total SLoC for these contracts?:  2040
 - How many external imports are there?: 25 dependencies external to our code
 - How many separate interfaces and struct definitions are there for the contracts within scope?:  5
 - Does most of your code generally use composition or inheritance?:   inheritance

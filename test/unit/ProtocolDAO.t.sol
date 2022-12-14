@@ -95,6 +95,17 @@ contract ProtocolDAOTest is BaseTest {
 		vm.stopPrank();
 	}
 
+	function testSetClaimingContractPctGreaterThanOne() public {
+		assertEq(dao.getClaimingContractPct("ClaimNodeOp"), 0.70 ether);
+
+		vm.startPrank(address(guardian));
+		vm.expectRevert(ProtocolDAO.ValueNotWithinRange.selector);
+		dao.setClaimingContractPct("ClaimNodeOp", 1.70 ether);
+		vm.stopPrank();
+
+		assertEq(dao.getClaimingContractPct("ClaimNodeOp"), 0.70 ether);
+	}
+
 	function testGetInflationIntervalRate() public {
 		assertEq(dao.getInflationIntervalRate(), 1000133680617113500);
 		assertGt(dao.getInflationIntervalRate(), 1 ether);
@@ -138,6 +149,17 @@ contract ProtocolDAOTest is BaseTest {
 		vm.stopPrank();
 	}
 
+	function testSetExpectedAVAXRewardsRateGreaterThanOne() public {
+		assertEq(dao.getExpectedAVAXRewardsRate(), 0.1 ether);
+
+		vm.startPrank(address(rialto));
+		vm.expectRevert(ProtocolDAO.ValueNotWithinRange.selector);
+		dao.setExpectedAVAXRewardsRate(1.1 ether);
+		vm.stopPrank();
+
+		assertEq(dao.getExpectedAVAXRewardsRate(), 0.1 ether);
+	}
+
 	function testGetMaxCollateralizationRatio() public {
 		assertEq(dao.getMaxCollateralizationRatio(), 1.50 ether);
 	}
@@ -148,6 +170,10 @@ contract ProtocolDAOTest is BaseTest {
 
 	function testGetTargetGGAVAXReserveRate() public {
 		assertEq(dao.getTargetGGAVAXReserveRate(), 0.1 ether);
+	}
+
+	function testGetMinipoolCancelMoratoriumSeconds() public {
+		assertEq(dao.getMinipoolCancelMoratoriumSeconds(), 5 days);
 	}
 
 	function testRegisterContract() public {
