@@ -14,7 +14,7 @@ contract xERC4626Test is Test {
 	TokenggAVAX public xToken;
 	MockERC20 public token;
 
-	uint256 public rewardsCycleLength = 14 days;
+	// uint256 public xToken.rewardsCycleLength() = 14 days;
 
 	function setUp() public {
 		// Using mock so it has public mint and burn, required for the tests
@@ -57,21 +57,22 @@ contract xERC4626Test is Test {
 		require(xToken.convertToAssets(seed) == seed); // 1:1 still
 
 		// // accrue half the rewards
-		skip(rewardsCycleLength / 2);
+		skip(xToken.rewardsCycleLength() / 2);
+		uint256 partialRewards = (reward * (block.timestamp - xToken.lastSync())) / (xToken.rewardsCycleEnd() - xToken.lastSync());
 		require(xToken.lastRewardsAmt() == reward);
-		require(xToken.totalAssets() == uint256(seed) + (reward / 2));
-		require(xToken.convertToAssets(seed) == uint256(seed) + (reward / 2)); // half rewards added
-		require(xToken.convertToShares(uint256(seed) + (reward / 2)) == seed); // half rewards added
+		require(xToken.totalAssets() == uint256(seed) + partialRewards);
+		require(xToken.convertToAssets(seed) == uint256(seed) + partialRewards); // half rewards added
+		require(xToken.convertToShares(uint256(seed) + partialRewards) == seed); // half rewards added
 
 		// // accrue remaining rewards
-		skip(rewardsCycleLength);
+		skip(xToken.rewardsCycleLength());
 		require(xToken.lastRewardsAmt() == reward);
 		require(xToken.totalAssets() == combined);
 		assertEq(xToken.convertToAssets(seed), combined); // all rewards added
 		assertEq(xToken.convertToShares(combined), seed);
 
 		// accrue all and warp ahead 1 cycle
-		skip(rewardsCycleLength * 2);
+		skip(xToken.rewardsCycleLength() * 2);
 		require(xToken.lastRewardsAmt() == reward);
 		require(xToken.totalAssets() == combined);
 		assertEq(xToken.convertToAssets(seed), combined); // all rewards added
@@ -95,37 +96,39 @@ contract xERC4626Test is Test {
 
 		// mint rewards to pool
 		token.mint(address(xToken), reward);
-		require(xToken.lastRewardsAmt() == 0, "reward");
-		require(xToken.totalAssets() == seed, "totalassets");
-		require(xToken.convertToAssets(seed) == seed); // 1:1 still
+		assertEq(xToken.lastRewardsAmt(), 0, "after mint lastRewardsAmt");
+		assertEq(xToken.totalAssets(), seed, "after mint totalAssets");
+		assertEq(xToken.convertToAssets(seed), seed, "after mint converToAssets"); // 1:1 still
 
-		skip(rewardsCycleLength / 2); // start midway
+		skip(xToken.rewardsCycleLength() / 2); // start midway
 
 		xToken.syncRewards();
-		require(xToken.lastRewardsAmt() == reward, "reward");
-		require(xToken.totalAssets() == seed, "totalassets");
-		require(xToken.convertToAssets(seed) == seed); // 1:1 still
+		assertEq(xToken.lastRewardsAmt(), reward, "after sync lastRewardsAmt");
+		assertEq(xToken.totalAssets(), seed, "after sync totalAssets");
+		assertEq(xToken.convertToAssets(seed), seed, "after sync converToAssets"); // 1:1 still
+
+		uint256 halfOfRemainingCycle = (xToken.rewardsCycleEnd() - block.timestamp) / 2;
 
 		// accrue half the rewards
-		console.log(xToken.totalAssets());
-		skip(rewardsCycleLength / 2);
-		require(xToken.lastRewardsAmt() == reward);
-		require(xToken.totalAssets() == uint256(seed) + (reward / 2), "totalassets");
-		require(xToken.convertToAssets(seed) == uint256(seed) + (reward / 2)); // half rewards added
+		skip(halfOfRemainingCycle);
+		uint256 partialRewards = (xToken.lastRewardsAmt() * (block.timestamp - xToken.lastSync())) / (xToken.rewardsCycleEnd() - xToken.lastSync());
+		assertEq(xToken.lastRewardsAmt(), reward, "mid cycle lastRewardsAmt");
+		assertEq(xToken.totalAssets(), seed + partialRewards, "mid cycle totalAssets");
+		assertEq(xToken.convertToAssets(seed), uint256(seed) + partialRewards, "mid cycle converToAssets"); // half rewards added
 
 		// accrue remaining rewards
-		skip(rewardsCycleLength / 2);
-		require(xToken.lastRewardsAmt() == reward);
-		require(xToken.totalAssets() == combined);
-		assertEq(xToken.convertToAssets(seed), combined); // all rewards added
-		assertEq(xToken.convertToShares(combined), seed);
+		skip(halfOfRemainingCycle + 1);
+		assertEq(xToken.lastRewardsAmt(), reward, "cycle end lastRewardsAmt");
+		assertEq(xToken.totalAssets(), combined, "cycle end totalAssets");
+		assertEq(xToken.convertToAssets(seed), combined, "cycle end convertToAssets"); // all rewards added
+		assertEq(xToken.convertToShares(combined), seed, "cycle end convertToShares");
 
 		// accrue all and warp ahead 1 cycle
-		skip(rewardsCycleLength);
-		require(xToken.lastRewardsAmt() == reward);
-		require(xToken.totalAssets() == combined);
-		assertEq(xToken.convertToAssets(seed), combined); // all rewards added
-		assertEq(xToken.convertToShares(combined), seed);
+		skip(xToken.rewardsCycleLength());
+		assertEq(xToken.lastRewardsAmt(), reward, "one cycle after lastRewardsAmt");
+		assertEq(xToken.totalAssets(), combined, "one cycle after totalAssets");
+		assertEq(xToken.convertToAssets(seed), combined, "one cycle after convertToAssets"); // all rewards added
+		assertEq(xToken.convertToShares(combined), seed, "one cycle after convertToShares");
 	}
 
 	function testTotalAssetsAfterDeposit(uint128 deposit1, uint128 deposit2) public {
@@ -190,7 +193,7 @@ contract xERC4626Test is Test {
 
 		xToken.deposit(seed, address(this));
 		require(xToken.totalAssets() == seed, "seed");
-		skip(rewardsCycleLength / 10);
+		skip(xToken.rewardsCycleLength() / 10);
 
 		// sync with no new rewards
 		xToken.syncRewards();
@@ -200,7 +203,7 @@ contract xERC4626Test is Test {
 		require(xToken.convertToShares(seed) == seed);
 
 		// fast forward to next cycle and add rewards
-		skip(rewardsCycleLength);
+		skip(xToken.rewardsCycleLength());
 		token.mint(address(xToken), reward); // seed new rewards
 
 		xToken.syncRewards();
@@ -208,7 +211,7 @@ contract xERC4626Test is Test {
 		require(xToken.totalAssets() == seed);
 		require(xToken.convertToShares(seed) == seed);
 
-		skip(rewardsCycleLength * 2);
+		skip(xToken.rewardsCycleLength() * 2);
 
 		require(xToken.lastRewardsAmt() == reward);
 		require(xToken.totalAssets() == combined);
@@ -233,7 +236,7 @@ contract xERC4626Test is Test {
 
 		xToken.deposit(seed, address(this));
 		require(xToken.totalAssets() == seed, "seed");
-		skip(rewardsCycleLength / 10);
+		skip(xToken.rewardsCycleLength() / 10);
 
 		token.mint(address(xToken), reward); // seed new rewards
 		// sync with new rewards
@@ -244,7 +247,7 @@ contract xERC4626Test is Test {
 		require(xToken.convertToShares(seed) == seed); // 1:1 still
 
 		// // fast forward to next cycle and add rewards
-		skip(rewardsCycleLength);
+		skip(xToken.rewardsCycleLength());
 		token.mint(address(xToken), reward2); // seed new rewards
 
 		xToken.syncRewards();
@@ -252,7 +255,7 @@ contract xERC4626Test is Test {
 		require(xToken.totalAssets() == combined1);
 		require(xToken.convertToAssets(seed) == combined1);
 
-		skip(rewardsCycleLength * 2);
+		skip(xToken.rewardsCycleLength() * 2);
 
 		require(xToken.lastRewardsAmt() == reward2);
 		require(xToken.totalAssets() == combined2);

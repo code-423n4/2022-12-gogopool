@@ -97,7 +97,9 @@ contract TokenggAVAX is Initializable, ERC4626Upgradeable, UUPSUpgradeable, Base
 		uint256 stakingTotalAssets_ = stakingTotalAssets;
 
 		uint256 nextRewardsAmt = (asset.balanceOf(address(this)) + stakingTotalAssets_) - totalReleasedAssets_ - lastRewardsAmt_;
-		uint32 nextRewardsCycleEnd = timestamp + rewardsCycleLength;
+
+		// Ensure nextRewardsCycleEnd will be evenly divisible by `rewardsCycleLength`.
+		uint32 nextRewardsCycleEnd = ((timestamp + rewardsCycleLength) / rewardsCycleLength) * rewardsCycleLength;
 
 		lastRewardsAmt = nextRewardsAmt.safeCastTo192();
 		lastSync = timestamp;

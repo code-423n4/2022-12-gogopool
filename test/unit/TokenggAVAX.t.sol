@@ -210,9 +210,9 @@ contract TokenggAVAXTest is BaseTest, IWithdrawer {
 		// 6. Skip 1/3 of rewards length and see 1/3 rewards in totalReleasedAssets
 		skip(ggAVAX.rewardsCycleLength() / 3);
 
-		uint256 oneThirdRewards = liquidStakerRewards / 3;
-		assertEq(ggAVAX.totalAssets(), depositAmount + oneThirdRewards);
-		assertEq(ggAVAX.convertToAssets(ggAVAX.balanceOf(bob)), depositAmount + oneThirdRewards);
+		uint256 partialRewards = (liquidStakerRewards * (block.timestamp - ggAVAX.lastSync())) / (ggAVAX.rewardsCycleEnd() - ggAVAX.lastSync());
+		assertEq(uint256(ggAVAX.totalAssets()), uint256(depositAmount) + partialRewards);
+		assertEq(ggAVAX.convertToAssets(ggAVAX.balanceOf(bob)), depositAmount + partialRewards);
 		assertEq(ggAVAX.lastRewardsAmt(), liquidStakerRewards);
 
 		// 7. Skip 2/3 of rewards length
