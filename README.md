@@ -19,7 +19,7 @@ The C4audit output for the contest can be found [here](https://gist.github.com/P
 
 _Note for C4 wardens: Anything included in the C4udit output is considered a publicly known issue and is ineligible for awards._
 
-_Same goes for Slither output and our [known issues](https://multisiglabs.notion.site/Known-Issues-0b7ffb3ac0494f2f8d6805dcd90e774d)._
+_Same goes for Slither output and our [known issues](https://multisiglabs.notion.site/Known-Issues-42e2f733daf24893a93ad31100f4cd98)._
 
 # Overview
 
