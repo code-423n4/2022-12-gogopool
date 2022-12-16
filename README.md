@@ -11,7 +11,7 @@
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-12-gogopool-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts December 15, 2022 20:00 UTC
-- Ends January 03, 2022 20:00 UTC
+- Ends January 03, 2023 20:00 UTC
 
 ## C4udit / Publicly Known Issues
 
