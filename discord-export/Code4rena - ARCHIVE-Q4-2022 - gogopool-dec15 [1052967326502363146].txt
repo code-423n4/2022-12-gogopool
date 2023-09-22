@@ -1,0 +1,1567 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q4-2022 / gogopool-dec15
+==============================================================
+
+[12/15/2022 15:21] itsmetechjay (pinned)
+👋 Hello and welcome to the contest channel for the $128,000 USDC** GoGoPool **contest!
+
+📆 Contest opens Thursday, 15 December 2022 20:00 (20:00 UTC) and runs through Tuesday, 03 January 2023 20:00 (20:00 UTC) (19 days).
+
+Please give a warm welcome to the GoGoPool team, particularly @memerson, @ju1ie | gogopool , and @JohnnyGault who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2022-12-gogopool-contest
+
+{Embed}
+https://code4rena.com/contests/2022-12-gogopool-contest
+Code4rena GoGoPool contest
+$128,000 USDC
+15 December 2022—3 January 2023
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/C4-banner-7C19B.png
+
+{Reactions}
+🫡 (11) 👍 (7) ggp (3) lfgg (3) 
+
+[12/15/2022 16:04] kartoonjoy
+Pinned a message.
+
+{Reactions}
+thankyou (3) 
+
+[12/15/2022 20:15] bobface
+Hey all, noob question, what's a "Mitigation review contest"? As is part of the GoGoPool contest
+
+{Reactions}
+👍 (2) 
+
+[12/15/2022 20:17] namaskaram
+🎈 Welcome, GoGoPool team!!
+
+
+[12/15/2022 20:20] thepicodes (pinned)
+**Automated Findings: ** https://gist.github.com/Picodes/49996eaab291146dc068c56752d2d1f3
+
+
+[12/15/2022 20:23] kartoonjoy (pinned)
+Wardens, please note that c4udit output has been posted above and added to pinned posts. These are considered publicly known issues and are not eligible for awards.
+
+**Automated findings: **
+https://gist.github.com/Picodes/49996eaab291146dc068c56752d2d1f3
+
+This will also be linked in the contest README file shortly.
+
+{Embed}
+https://gist.github.com/Picodes/49996eaab291146dc068c56752d2d1f3
+4naly3er-2022-12-gogopool.md
+GitHub Gist: instantly share code, notes, and snippets.
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/gist-og-image-17482.png
+
+
+[12/15/2022 20:23] kartoonjoy
+Pinned a message.
+
+
+[12/15/2022 20:23] kartoonjoy
+Pinned a message.
+
+
+[12/15/2022 20:27] trustminimised
+Yeah, curious about this as well.
+
+
+[12/15/2022 20:30] namaskaram
+I can't seem to access the **known issues** page here: https://multisiglabs.notion.site/Known-Issues-0b7ffb3ac0494f2f8d6805dcd90e774d
+Works if I go through the link on this page, though: https://multisiglabs.notion.site/C4-Audit-f26381cf715b41df809e0e18963baa03
+
+probably notion being bad
+
+{Reactions}
+👀 (4) 
+
+[12/15/2022 20:31] namaskaram
+Oh yeah this should be the link: https://multisiglabs.notion.site/Known-Issues-42e2f733daf24893a93ad31100f4cd98
+
+
+[12/15/2022 20:32] memerson
+good catch. I'll get that fixed
+
+
+[12/15/2022 20:35] bookland
+Dear GoGoPool team,
+
+I am looking forward to participating in the audit competition and will work hard and diligently to make the most of this opportunity. I am excited to put my skills to the test and learn from my fellow competitors.
+
+{Reactions}
+pikaroll (13) 
+
+[12/15/2022 21:09] ermaniwe
+wow, finally a contest that lasts more than a week 😄 really looking forward to the final report to learn from it. And hopefully will manage to get into report 🙂
+
+
+[12/15/2022 21:25] 2997ms
++1
+
+{Reactions}
+👍 (2) 
+
+[12/16/2022 03:01] henryf3
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/image-39697.png
+
+{Reactions}
+💰 (25) thankyou (6) chefskiss (2) 
+
+[12/16/2022 15:22] gatesyp
+Hello everyone! Excited to help out wardens and get this code bullet proof!
+
+{Reactions}
+C4Keycap (13) 🔥 (4) 
+
+[12/16/2022 23:59] lukejohn_
+That is a high!
+
+{Reactions}
+🎉 (4) 🖖 
+
+[12/17/2022 14:24] supernovahs
+HIi everyone
+
+{Reactions}
+blobwave 
+
+[12/18/2022 08:12] supernovahs
+@memerson  Can u give me a natspec for this function in ur language?
+https://github.com/code-423n4/2022-12-gogopool/blob/aec9928d8bdce8a5a4efe45f54c39d4fc7313731/contracts/contract/tokens/TokenggAVAX.sol#L132
+
+{Embed}
+https://github.com/code-423n4/2022-12-gogopool/blob/aec9928d8bdce8a5a4efe45f54c39d4fc7313731/contracts/contract/tokens/TokenggAVAX.sol
+2022-12-gogopool/TokenggAVAX.sol at aec9928d8bdce8a5a4efe45f54c39d4...
+Contribute to code-423n4/2022-12-gogopool development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/3e746074-cf35-494d-97e6-2f34c8f647c2-71EAB
+
+
+[12/18/2022 08:13] supernovahs
+What does amount available for staking refers to
+
+
+[12/18/2022 23:51] kiki_dev
+Anyone else having troubles with importing the @rari-capital/solmate files?
+
+
+[12/19/2022 00:35] birdy0219
+Yeh, i just manually edited remapping.txt
+
+
+[12/19/2022 01:43] kiki_dev
+Thanks!
+
+{Reactions}
+👍 
+
+[12/19/2022 14:59] ju1ie
+amount available for staking refers to the amount of avax in the ggavax contract that is available to be used to make up the other half of a minipool. Those funds will be staked to make the minipool. Let me know if this doesnt make sense
+
+{Reactions}
+👍 (2) 
+
+[12/20/2022 04:53] lukejohn_
+Which file is the main/entry file to look at?
+
+
+[12/20/2022 07:23] SpaceCake#8961
+I have managed to run the local Hardhat network using `just node` and deploy the contracts with `just deploy-base` then `just deploy`. I can see the resources being created in both the commands output, and the Hardhat server.
+Is  there a way for me to interact with my local blockchain easily? Can I have a blockchain explorer?
+I have tried to use ganache through the `hardhat-ganache` extension but to no avail (https://hardhat.org/hardhat-runner/docs/other-guides/ganache-tests)
+I have also noticed a mention of https://panopticon.fly.dev in the `.env` file. Is that related?
+
+If I am all over the place, bear with me I am a web3 newbie 😅
+
+
+[12/20/2022 07:58] _oceansky
+Hey bro!, how are you! remember me haha
+
+{Reactions}
+👋 
+
+[12/20/2022 07:59] _oceansky
+Hi Picodes dmed you thanks
+
+
+[12/20/2022 14:55] memerson
+`MinipoolManager.sol` for Node Operators, and `TokenggAVAX.sol` for liquid staking
+
+
+[12/20/2022 15:18] memerson
+Instead of `deploy-base` then `deploy` you can just run `just setup-evm` which will take you through all the setup steps https://github.com/code-423n4/2022-12-gogopool/blob/aec9928d8bdce8a5a4efe45f54c39d4fc7313731/Justfile#L42
+
+You're right about https://panopticon.fly.dev, if you switch that in the top right to "hardhat" you can see the state of the local blockchain. Panopticon doesn't do any interacting, just viewing. 
+
+To interact with the local chain we created hardhat tasks that hit contract methods. You can run a task with `just task <name_of_task>` . There are two scenario files that take you through a full cycle of operation using these tasks https://github.com/code-423n4/2022-12-gogopool/blob/main/scenarios/Full%20Cycle%20One%20User.md
+
+{Reactions}
+❤️ 
+
+[12/20/2022 20:04] lukejohn_
+Thanks alot
+
+
+[12/20/2022 21:38] kiki_dev
+This might be a dumb question or I’m just blind. But where in the code does someone become a node operator? I’m assuming guardian has to be the one to set it. But I can’t find where that is in the project.
+
+
+[12/20/2022 23:35] johnnygault
+Anyone can become a node operator by staking GGP then calling `createMinipool`  ,and sending 1000 AVAX. There is no way for C-Chain solidity code to "check" that an actual validator node exists etc. All we can do is get the user's supplied NodeID, and then we issue the validation tx on the P-Chain that promotes that nodeID to an Avalanche Validator. If the nodeID is invalid or does not exist, everything works, it just wont recv a reward and then GoGoPool would slash their GGP to compensate.
+
+{Reactions}
+thankyou (2) 
+
+[12/21/2022 06:38] lukejohn_
+Can you briefly introduce the difference between C-chain and P-chain? Any documentation link?
+
+
+[12/21/2022 06:48] bit.surfer
+https://docs.avax.network/overview/getting-started/avalanche-platform
+
+{Embed}
+https://docs.avax.network/overview/getting-started/avalanche-platform
+Developer Documentation and Tutorials for Avalanche
+Avalanche is the fastest smart contracts platform in the blockchain industry, as measured by time-to-finality, and has the most validators securing its activity of any proof-of-stake protocol.
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/Avalanche-OG-Image-BB700.png
+
+{Reactions}
+👍 
+
+[12/21/2022 09:15] eyexploit
+what is mitigation review contest there?
+
+
+[12/21/2022 16:57] chaduke#3730
+@bitsurferthanks
+
+
+[12/21/2022 19:44] faithxia
+how many exchanges would the ggp token be listed on?
+
+
+[12/21/2022 21:39] Franfran#5067
+Did we got an answer about that yet ?
+
+
+[12/21/2022 21:47] johnnygault
+AFAIK specific teams will be invited back to review the mitigations.
+
+{Reactions}
+👍 
+
+[12/21/2022 21:48] Franfran#5067
+Is that an external actor or wardens from C4 ?
+
+
+[12/21/2022 22:59] chaduke#3730
+Q: where is withdrawer.receiveWithdrawalAVAX() defined?
+
+
+[12/21/2022 23:03] johnnygault
+The fn doesnt do anything, it is just a payable. Any contract that needs to recv AVAX from the Vault needs to implement it via `IWithdrawer` interface.
+
+{Reactions}
+👍 
+
+[12/21/2022 23:57] chaduke#3730
+got it, make sense
+
+
+[12/22/2022 02:59] faithxia
+@JohnnyGault could I please get an answer to this question?
+
+
+[12/22/2022 03:28] johnnygault
+Initially? None. In the future — not sure 🤷‍♂️
+
+{Reactions}
+👍 
+
+[12/22/2022 05:11] chaduke#3730
+Q1: what is index for the first staker? Q2: what is the index fo the first pool?
+
+
+[12/22/2022 10:01] mert_eren#2527
+is there any link for rialto oracle?
+
+
+[12/22/2022 10:59] Franfran#5067
+any sponsor fren here ?
+
+{Reactions}
+👋 
+
+[12/22/2022 12:49] un_for_given
+Do we need to learn extra stuff about Avalanche to participate in this contest?
+
+
+[12/22/2022 15:10] johnnygault
+Not really, all the contracts are standard Solidity. Avalanche specific stuff does exist but is out of scope for this contest.
+
+
+[12/22/2022 15:11] johnnygault
+No, it is out of scope for this contest.
+
+
+[12/22/2022 15:11] johnnygault
+C4 Wardens
+
+
+[12/22/2022 15:49] supernovahs
+@JohnnyGault dmed
+
+
+[12/22/2022 16:36] supernovahs
+What are the initial values for these
+`dao.getMinipoolMaxAVAXAssignment()`
+and `dao.getMinipoolMinAVAXAssignment()`
+
+
+[12/22/2022 16:40] johnnygault
+They will be both be 1000 AVAX to start, so 50% of the 2000 AVAX required by the Avalanche protocol to start a validator.
+
+
+[12/22/2022 21:08] un_for_given
+then why is this contest duration is so long?
+
+
+[12/22/2022 21:08] johnnygault
+Holidays?
+
+{Reactions}
+🎉 
+
+[12/22/2022 21:11] trustminimised
+C4 is closed between the 23rd and the 2nd of January. The contest shouldn't end while the staff are out.
+
+
+[12/22/2022 21:17] supernovahs
+Ooo
+
+
+[12/22/2022 23:29] Franfran#5067
+Nice
+
+
+[12/23/2022 11:32] delvir0
+To be sure, is the codebase mostly forked from RocketPool and adjusted to fit AVAX or simply based on RocketPool architecture ?
+
+
+[12/23/2022 13:14] 0xbtk
+@JohnnyGault Dmed you
+
+
+[12/23/2022 14:29] Franfran#5067
+Isn't it only based on rocket pool eternal storage ?
+
+
+[12/23/2022 15:34] yellowbirby
+Perhaps out of scope but still important context. Could you point to a tech primier on Avax staking ?
+
+
+[12/23/2022 16:11] johnnygault
+We used RocketPool as inspiration, but since eth staking and avalanche staking are so different, we diverged quite a bit. We kept the storage model they used, which has worked out great.
+
+
+[12/23/2022 16:12] johnnygault
+https://docs.avax.network/
+
+
+[12/23/2022 20:43] yellowbirby
+Would you mind if I DM you?
+
+
+[12/23/2022 21:59] chaduke#3730
+what is getAVAXAssignedHighWater?
+
+
+[12/23/2022 22:07] kiki_dev
+The storage model has been really interesting to dive into!
+
+{Reactions}
+👍 (2) 
+
+[12/23/2022 22:15] kiki_dev
+@JohnnyGault  dmd you
+
+
+[12/24/2022 14:22] Franfran#5067
+any news abt this ?
+
+
+[12/24/2022 16:51] Saintcode_#8823
+for real
+
+
+[12/24/2022 17:26] Saintcode_#8823
+Although in terms of gas efficiency I don't think it's the best idea
+
+{Reactions}
+👍 (3) 
+
+[12/24/2022 20:09] Franfran#5067
+Sure
+
+
+[12/25/2022 06:17] nameruse#6452
+is the minipool delegation fee the same fee as nodeOp commission fee or are they  two seprate fees?
+
+
+[12/25/2022 11:22] mert_eren#2527
+no
+
+
+[12/25/2022 15:28] johnnygault
+separate.
+
+
+[12/25/2022 18:11] jm217
+@JohnnyGault  sent DM
+
+
+[12/26/2022 12:08] jm217
+What is the parameter `delegationFee` of the function `createMiniPool()` used for?
+
+
+[12/26/2022 14:22] 0xbtk
+@JohnnyGault
+
+
+[12/26/2022 14:22] 0xbtk
+If the multisig is disabled, where is the code for reassigning the minipool to the new multisig?
+
+
+[12/26/2022 15:25] johnnygault
+It is used when registering the node ID as a validator on Avalanche. Any user can delegate to any node id and get rewarded minus the delegation fee which can be 2% - 100%
+
+
+[12/26/2022 15:29] johnnygault
+doesn’t exist currently. We can’t really reassign once launched, the multisig has to finish out all minipools assigned to it. disable means the multisig would not get any new minipools.
+
+
+[12/26/2022 16:43] holladiewaldfee0706
+@JohnnyGault sent friend request
+
+
+[12/26/2022 18:49] czar102
+@JohnnyGault DMed :)
+
+
+[12/27/2022 00:09] acegawd
+Dmed as well @JohnnyGault
+
+
+[12/27/2022 05:10] nameruse#6452
+Hello, when does Rialto call ClaimNodeOp.calculateAndDistributeRewards()?
+
+
+[12/27/2022 05:30] johnnygault
+See RialtoSimulator.sol
+
+
+[12/27/2022 05:55] koxuan#5926
+@JohnnyGault  dmed you
+
+
+[12/27/2022 09:48] akshaysrivastav
+The readme file mentions `MultisigManager.sol` in scope while the notion docs doesn't.
+
+
+[12/27/2022 15:27] johnnygault
+MultisigManager.sol is in scope, sorry for the mixup.
+
+{Reactions}
+👍 
+
+[12/27/2022 18:25] evan#9648
+@JohnnyGault DMed
+
+
+[12/27/2022 18:40] acegawd
+Still haven't received a response to my DM @JohnnyGault
+
+
+[12/27/2022 19:19] chaduke#3730
+where is the proxy contract for ``TokenggAVAX.sol``?
+
+
+[12/27/2022 19:46] johnnygault
+It uses UUPS https://github.com/code-423n4/2022-12-gogopool/blob/aec9928d8b/contracts/contract/tokens/TokenggAVAX.sol#L16
+
+
+[12/27/2022 21:52] chaduke#3730
+thanks
+
+
+[12/27/2022 22:08] chaduke#3730
+that is the implementation/logic contract, what about the proxy contract?
+
+
+[12/27/2022 22:19] johnnygault
+It’s in the OZ lib, a hardhat plugin does the deploy
+
+
+[12/27/2022 22:31] chaduke#3730
+ok thanks
+
+
+[12/27/2022 22:46] Franfran#5067
+As an add-on, you can find how it's done in the foundry tests as well
+
+
+[12/27/2022 22:46] chaduke#3730
+all right, thanks again
+
+
+[12/28/2022 12:08] enckrish
+@JohnnyGault dmed you
+
+
+[12/28/2022 12:52] Franfran#5067
+DM'd you @ju1ie | gogopool
+
+{Reactions}
+✅ 
+
+[12/29/2022 17:54] chaduke#3730
+The slashed GGP is transferred to ``ProtocolDAO``, how will liquid stakers claim these slashed GGP?
+
+
+[12/29/2022 18:18] johnnygault
+Since slashing is fairly uncommon on Avalanche, we will have the ProtocolDAO periodically sell accumulated GGP for AVAX to give liquid stakers.
+
+
+[12/29/2022 18:33] vankys
+Hi. Can somebody explain what is the purpose of the 'duration' property of the minipool?
+
+
+[12/29/2022 18:37] johnnygault
+`Duration` is for the nodeOp to say how long they want their node to be a validator. Avalanche protocol requires it to be between 14-365 days. Behind the scenes, Rialto will cycle each minipool every 14 days so that rewards continually flow into the protocol. In the future we can see a path where the DAO can ladder the maturities to maximize yield and still maintain liquidity for ggAVAX.
+
+
+[12/29/2022 18:45] vankys
+Thank you! Does that mean duration = endTime - startTime in the MinipoolManager?
+
+
+[12/29/2022 18:45] chaduke#3730
+@JohnnyGaultThanks, is this a future work or has been implemented by some function (sell GGP ans save it to ggAVAX)?
+
+{Reactions}
+👍 
+
+[12/29/2022 19:11] johnnygault
+future work
+
+
+[12/29/2022 19:12] chaduke#3730
+all right
+
+
+[12/29/2022 19:12] chaduke#3730
+@JohnnyGault
+
+
+[12/29/2022 19:12] johnnygault
+no, the start and end are actual start and end for the 14 day cycles.
+
+{Reactions}
+✅ 
+
+[12/29/2022 21:01] danyams#9668
+I was wondering what the difference between a staker and a Rialto multisig is in the implementation.  Specifically, are multisigs controlled by stakers?
+
+
+[12/29/2022 21:27] johnnygault
+no, the multisig is not related to stakers
+
+
+[12/30/2022 00:56] cryptphi
+@JohnnyGault okay to DM for some clarification?
+
+{Reactions}
+👍 
+
+[12/30/2022 06:44] trtrth
+@JohnnyGault dmed
+
+
+[12/30/2022 18:03] matin6517
+https://github.com/MatinR1/UpgradeableTest
+In this repo I made some upgradeability tests with Foundry.
+The implementation contract inherits the UUPS.sol and the proxy is defined the same way as the mentioned Plugin does.
+Hope this can help
+
+{Embed}
+https://github.com/MatinR1/UpgradeableTest
+GitHub - MatinR1/UpgradeableTest: Upgradeability test for UUPS-type...
+Upgradeability test for UUPS-type proxies. Contribute to MatinR1/UpgradeableTest development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/UpgradeableTest-785B4
+
+
+[12/30/2022 18:08] chaduke#3730
+@Matinthanks, will check it out
+
+
+[12/30/2022 18:10] chaduke#3730
+Another question: does the rewardsPool own all the GGP initially (via the vault)? Otherwise, who and how the GGP is sent to rewardsPool?
+
+
+[12/30/2022 18:14] johnnygault
+When the GGP token is deployed, we will distr it appropriately, including sending some to the rewardsPool.
+
+
+[12/30/2022 18:14] chaduke#3730
+ok, thanks
+
+
+[12/30/2022 20:22] johnnygault
+To clarify `duration` for everyone -- a nodeOp can choose a duration they want, from 14 days to 365 days. But behind the scenes, Rialto will *only* create a validator for 14 days. At the end of the 14 days, the Avalanche protocol pays out the validation rewards and all funds are returned to the contracts, which divvy up the rewards between liq stakers and nodeops. If the `duration` still has time left to go, Rialto will call `recreateMinipool` which will do another 14 days cycle( if it can considering GGP collat and available liq staker funds), compounding the rewards. In this way, the protocol recvs yield from every minipool every 14 days, and the collat ratio of GGP can never get more than 14 days out of whack. In the future we see a path for laddering maturities to maximize yield and still provide necessary liq for stakers.
+
+{Reactions}
+👍 (3) 
+
+[12/30/2022 20:26] un_for_given
+@JohnnyGault  okay to DM for some clarification?
+
+{Reactions}
+👍 (2) 
+
+[12/30/2022 20:46] johnnygault
+@ju1ie | gogopool and @memerson can also help
+
+{Reactions}
+👍 
+
+[12/30/2022 23:24] acegawd
+DM @ju1ie | gogopool
+
+
+[12/31/2022 11:09] 0xrajkumar
+Contract are deployed on testnet?
+
+
+[12/31/2022 11:09] 0xrajkumar
+if yes then please send me addresses
+
+
+[12/31/2022 14:05] stealthyzzzz
+@ju1ie | gogopool  dm
+
+
+[12/31/2022 16:02] holladiewaldfee0706
+@ju1ie | gogopool check dm please
+
+{Reactions}
+✅ 
+
+[12/31/2022 18:59] namaskaram
+@memerson dm'd you
+
+
+[12/31/2022 19:37] acegawd
+Who's available @ju1ie | gogopool @memerson @JohnnyGault ?
+
+
+[12/31/2022 19:49] memerson
+I’m available
+
+
+[12/31/2022 22:45] ju1ie
+not seeing your dm, feel free to send me one
+
+
+[01/01/2023 08:31] koxuan#5926
+@ju1ie | gogopool dmed you
+
+
+[01/01/2023 10:14] stealthyzzzz
+Sorry I mean I added u as a friend 🙂
+
+
+[01/01/2023 11:15] ustas.eth
+@memerson DM!
+
+
+[01/01/2023 11:18] ustas.eth
+@ju1ie | gogopool @JohnnyGault are you available?
+
+
+[01/01/2023 15:47] gz627
+@memerson In Known Issues:"GGP Rewards Manipulation Before Distribution" - This can only be taken advantage of when signing up for 2-4 week validation periods. Our protocol is incentivizing nodes to sign up for 3-12 month validation periods.
+What is the actual incentive?
+
+
+[01/01/2023 16:23] ustas.eth
+What is Rialto? Where we can find the docs or sources?
+
+
+[01/01/2023 16:36] johnnygault
+it’s an MPC system that handles the Avalanche specific functions. Rialtosimulator.sol shows t you what contracts it interacts with.
+
+
+[01/01/2023 16:43] Franfran#5067
+Can I dm you?
+
+{Reactions}
+👍 
+
+[01/01/2023 17:00] gz627
+If a node operator creates a minipool with a duration of 180 days, is it possible for the node operator quit after, say 90 days?
+
+
+[01/01/2023 17:11] johnnygault
+no, but the cycle could stop based on some factors like ggp collat ratio falling too low, or there not being enough liq staker funds.
+
+
+[01/01/2023 17:12] gz627
+Thanks!
+
+
+[01/01/2023 17:12] Franfran#5067
+Though the liquid stakers funds are taken upon the starting of the validator period isn't it ?
+
+
+[01/01/2023 17:13] Franfran#5067
+So it's locked it shouldn't stop the validation
+
+
+[01/01/2023 17:15] johnnygault
+each cycle, all the funds are moved back to the C chain and divvyed up, then the cycle starts again. there could be edge cases where there is not enough avax to start another cycle
+
+{Reactions}
+👌 
+
+[01/01/2023 17:16] gz627
+is it possible for a minipool to get started if the duration is less than 14 days?
+
+
+[01/01/2023 17:17] Franfran#5067
+Nodes on Avalanche have a minumum of 14 days afaik
+
+
+[01/01/2023 17:18] Franfran#5067
+For validation
+
+
+[01/01/2023 17:18] Franfran#5067
+In order to yield some rewards
+
+
+[01/01/2023 17:18] johnnygault
+no avalanche required 14 days min
+
+{Reactions}
+👍 
+
+[01/01/2023 17:22] johnnygault
+Just wanted to say a big Thank You to everyone for spending part of your holidays staring at our code. We are humbled by the combined brain power of this group. We look forward to learning from y’all while digesting your reports!
+
+{Reactions}
+hi5 (36) 💯 (9) chefskiss (6) 
+
+[01/02/2023 13:06] _oceansky
+Hi @JohnnyGault , dmed you. thanks
+
+
+[01/02/2023 16:48] 0xbtk
+@JohnnyGault
+
+
+[01/02/2023 16:48] 0xbtk
+Does the TokenGGP price remain constant?
+
+
+[01/02/2023 17:00] johnnygault
+Rialto will act as an Oracle to set the price in the initial bootstrap phase of the Protocol.
+
+
+[01/02/2023 17:31] 0xbtk
+And if the GGP collateral ratio drops below 10%, what will happen?
+
+
+[01/02/2023 17:45] johnnygault
+Every 2 weeks the minipool is recreated, if GGP collat is too low, the minipool will not be recreated, and the nodeop can either stake more ggp, or withdraw their funds.
+
+
+[01/02/2023 18:11] 0xbtk
+ok thanks
+
+
+[01/03/2023 13:20] jc9307
+@JohnnyGault dm
+
+
+[01/03/2023 14:16] acegawd
+DM @ju1ie | gogopool
+
+{Reactions}
+✅ 
+
+[01/03/2023 14:41] allarious
+@memerson DMed you, thanks.
+
+{Reactions}
+👍 
+
+[01/03/2023 18:55] ju1ie
+good luck everyone with their reports! DM me for any last minute questions
+
+{Reactions}
+hypercat (5) chefskiss (3) 
+
+[01/03/2023 20:02] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **GoGoPool **contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+{Reactions}
+nice (24) 🍔 (13) goose (11) chefskiss (14) 🎉 (13) 
+
+[01/03/2023 20:21] supernovahs
+Good luck everyone
+
+{Reactions}
+👍 (14) 🤞 (2) ✅ 
+
+[01/03/2023 20:28] Franfran#5067
+Are issues related to this considered as valid ?
+
+
+[01/04/2023 16:34] Aeros#7185
+The Architecture and Protocol Overview on Notion was very well written, and helped me get a good sense on how the contracts interacted with one another.
+
+{Reactions}
+➕ (7) 
+
+[01/04/2023 18:28] memerson
+Thanks for the feedback! If anyone has other comments of things that could be improved or went well we'd love to hear.
+
+
+[01/06/2023 18:01] Franfran#5067
+can we have an answer regarding this ?
+
+
+[01/06/2023 19:08] alextheentreprenerd
+Not sure as I need to check all findings, can answer once I've started judging
+
+
+[01/06/2023 19:09] Franfran#5067
+There have been some talking about this, but how does the findings would alter your choice ?
+
+
+[01/06/2023 19:11] alextheentreprenerd
+We'll see
+
+
+[01/07/2023 08:07] shadowave213
+When  reports will be out for gogopool contest?
+
+
+[01/13/2023 12:10] web3sec
++1
+
+
+[01/13/2023 12:23] alextheentreprenerd
+Have yet to judge this one (Sponsor review right now), so it will take a while, at least a month before the report, with some luck we can get awards out earlier
+
+{Reactions}
+👍 (12) 
+
+[01/13/2023 20:02] ea3384
+good luck to all wardens...
+
+
+[01/25/2023 23:38] xyzbtchunt
+Any update @Alex The Entreprenerd ?
+
+
+[01/26/2023 08:01] alextheentreprenerd
+Am judging HMs starting today so it will need some time
+
+{Reactions}
+😋 (9) 🙏 (10) 
+
+[01/29/2023 11:23] ladboy233
+gogo👀😀
+
+{Reactions}
+😅 (14) chefskiss (3) 
+
+[02/01/2023 04:45] akshaysrivastav
+👀
+
+{Reactions}
+💸 (5) 🥹 (2) 
+
+[02/01/2023 14:42] alextheentreprenerd
+Let's say Monday worst case
+
+{Reactions}
+👍 (11) ❤️ (4) 🫡 (2) 
+
+[02/01/2023 14:42] alextheentreprenerd
+For triage*
+
+
+[02/03/2023 11:17] 0xWeiss#1412
+🕵🏻‍♂️
+
+{Reactions}
+👀 (2) 
+
+[02/03/2023 15:51] ladboy233
+https://tenor.com/view/lets-go-gif-22712392
+
+{Embed}
+https://tenor.com/view/lets-go-gif-22712392
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/lets-go-A9090.png
+
+
+[02/03/2023 15:58] kmanofficial
+Can those in backstage already see the findings?
+
+
+[02/03/2023 19:24] Saintcode_#8823
+frfr
+
+{Reactions}
+👀 (7) 
+
+[02/06/2023 10:55] matin6517
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/IMG-20210412-WA0002-3C45A.jpg
+
+{Reactions}
+😂 (5) 
+
+[02/06/2023 11:14] xyzbtchunt
+@Alex The Entreprenerd any update?
+
+
+[02/06/2023 11:48] alextheentreprenerd
+Triage ends tomorrow, just need to finalize decisions
+
+{Reactions}
+🔥 (19) hi5 (2) 
+
+[02/06/2023 20:09] web3sec
+Waiting 😇
+
+{Reactions}
+🕵️‍♂️ (4) 
+
+[02/07/2023 18:46] ladboy233
+:chefskiss: 👀
+
+{Reactions}
+👀 (4) 
+
+[02/07/2023 21:19] Saintcode_#8823
+😎
+
+{Reactions}
+👀 (4) 
+
+[02/07/2023 21:31] 0xWeiss#1412
+:4739_Skeletor:
+
+{Reactions}
+👀 (6) 
+
+[02/07/2023 23:18] chaduke#3730
+https://tenor.com/view/rascal-the-raccoon-cant-wait-excited-raccoon-sti-gif-20017405
+
+{Embed}
+https://tenor.com/view/rascal-the-raccoon-cant-wait-excited-raccoon-sti-gif-20017405
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/rascal-the-raccoon-cant-wait-2290A.png
+
+{Reactions}
+C4Keycap (3) 
+
+[02/08/2023 02:10] xyzbtchunt
+:4739_Skeletor: :4739_Skeletor: :4739_Skeletor:
+
+{Reactions}
+psyduck (6) 
+
+[02/08/2023 12:24] 0xWeiss#1412
+🥲
+
+
+[02/08/2023 12:27] matin6517
+🥺🔫
+
+{Reactions}
+🤯 (3) 
+
+[02/08/2023 17:15] alextheentreprenerd
+:pepe_mcd:
+
+
+[02/08/2023 17:15] alextheentreprenerd
+Needed an extra day
+
+{Reactions}
+👍 (2) 
+
+[02/08/2023 17:16] ladboy233
+:chefskiss:
+
+
+[02/08/2023 17:16] ladboy233
+👍
+
+
+[02/08/2023 18:20] supernovahs
+👀👀
+
+
+[02/08/2023 19:18] alextheentreprenerd
+I'm finishing tomorrow to make sure it's properly judged
+
+{Reactions}
+psyduck (5) 👍 (7) thisisfine (5) 🥹 (5) 
+
+[02/09/2023 14:28] ladboy233
+👁️
+
+{Reactions}
+👍 (5) 👀 (6) praisethesun (4) 😬 (5) 
+
+[02/09/2023 17:13] pfapostol
+https://github.com/code-423n4/code423n4.com/pull/7457/files
+
+{Embed}
+https://github.com/code-423n4/code423n4.com/pull/7457/files
+Add results for contest 194 by CloudEllie · Pull Request #7457 · co...
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/84729667-C9F7E
+
+{Reactions}
+👀 (3) pog (2) 
+
+[02/09/2023 17:15] ladboy233
+cool
+
+
+[02/09/2023 17:15] ladboy233
+:hi5:
+
+{Reactions}
+praisethesun 
+
+[02/09/2023 17:18] pfapostol
+Looks like there was a lot to look for here, and I just did gas because of the holidays. And even, could not pass the gas score barrier for the first time.
+
+
+[02/09/2023 17:31] matin6517
+After centuries of waiting, just got $57.2 🥹🔫
+
+
+[02/09/2023 17:38] pfapostol
+Yes, it's always best to participate in many contests and never rely on any particular one. It's like poker, you can only guess what cards are in the hands of the rest and what rewards you might get.
+
+
+[02/09/2023 17:41] matin6517
+Definitely true👍
+
+
+[02/09/2023 17:42] .daredev1l
+I want to know something .. I submitted one issue for Gas Optimization and I'm sure It's valid Finding, Why I didn't get paid for this ? I'm asking to know what is my mistake for this
+
+
+[02/09/2023 17:44] pfapostol
+probably below the minimum score.
+
+
+[02/09/2023 17:44] .daredev1l
+It was i++ , but how to know about the minimum score?
+
+
+[02/09/2023 17:45] pfapostol
+i++ is out of scope, if it was only it, score is probably zero 😀
+
+
+[02/09/2023 17:46] .daredev1l
+okey nice, how to know about calculation for the score of Gas Optimizations ? to be accepted
+
+
+[02/09/2023 17:46] Franfran#5067
+it has probably been found by the static analyzer
+
+
+[02/09/2023 17:47] pfapostol
+Points are counted by the judges, and if you are not a backstage, all that remains is to trust them. Or sometimes you can ask them.
+
+
+[02/09/2023 17:48] .daredev1l
+I trust for sure
+
+
+[02/09/2023 17:48] ladboy233
+QA report worth 4 digit payout?
+
+{Reactions}
+☝️ (2) 
+
+[02/09/2023 17:48] .daredev1l
+I just want to know more about this scores
+
+
+[02/09/2023 17:48] pfapostol
+I submitted 8 gas findings and all of them were probably below the minimum score. So I think the barrier is very high in this contest.
+
+
+[02/09/2023 17:49] pfapostol
+probably a lot of stuff that i missed.
+
+
+[02/09/2023 17:51] .daredev1l
+okey thanks
+
+
+[02/09/2023 19:14] kmanofficial
+$21.70 🥹🔫
+
+
+[02/09/2023 19:34] delvir0
+Where can I find the results?
+
+
+[02/09/2023 19:39] itsmetechjay
+:C4Keycap:  💸 🎉 Awards for **GoGoPool**, part 1:
+
+$8,696.71 USDC » @unforgiven 
+$5,254.40 USDC » @HollaDieWaldfee 
+$4,197.77 USDC » @ladboy233小伙子 
+$3,053.20 USDC » @hansfriese 
+$2,445.15 USDC » @RaymondFam 
+$2,391.76 USDC » @chaduke 
+$2,383.64 USDC » @CharlesPal 
+$2,375.26 USDC » @IllIllI 
+$2,286.97 USDC » @ak1 
+$2,172.25 USDC » @AkshaySrivastav 
+$2,138.26 USDC » @0xbepresent 
+$2,105.97 USDC » @sces60107 | GimelSec 
+$1,874.46 USDC » @bin2chen 
+$1,862.33 USDC » @rvierdiiev 
+$1,830.97 USDC » @0xdeadbeef0x 
+$1,826.19 USDC » @Jeiwan 
+$1,772.64 USDC » @cozzetti 
+$1,687.72 USDC » @aviggiano 
+$1,673.80 USDC » @Allarious 
+$1,504.13 USDC » @wagmi 
+$1,442.56 USDC » @immeas 
+$1,375.60 USDC » @Franfran 
+$1,198.27 USDC » @0xSmartContract 
+$1,015.59 USDC » @!0xcaventa 
+$934.62 USDC » @Noam Yakov 
+$917.68 USDC » @peritoflores 
+$869.54 USDC » @yixxas 
+$790.64 USDC » @cccz 
+$762.69 USDC » @__141345__ 
+$718.94 USDC » @kartkhira 
+$706.92 USDC » @csanuragjain 
+$680.27 USDC » @shark 
+$648.41 USDC » @ast3ros 
+$635.39 USDC » SmartSek (@hake | SmartSek, @Django | Saloon Finance)
+$501.86 USDC » @Thunder 
+$498.21 USDC » @0x73696d616f 
+$484.34 USDC » @Josiah 
+$450.54 USDC » @imare 
+$447.45 USDC » @datapunk 
+$408.47 USDC » @enckrish 
+$373.72 USDC » @danyams 
+$369.10 USDC » @peakbolt 
+$300.84 USDC » @adriro 
+$299.96 USDC » @ck 
+$282.23 USDC » @Saintcode_ 
+$205.14 USDC » @Rolezn 
+$184.55 USDC » V_B (@Barichek, @Vlad B | zkSync)
+$179.38 USDC » @0xv0id 
+$179.38 USDC » @cryptonue 
+$174.67 USDC » @koxuan 
+$146.79 USDC » @kaliberpoziomka8552 
+$145.30 USDC » @supernova 
+$145.30 USDC » @slowmoses 
+$144.53 USDC » @brgltd 
+$130.36 USDC » @btk 
+$128.82 USDC » @stealthyz 
+$123.60 USDC » @0Kage 
+$122.82 USDC » @codeislight 
+$122.82 USDC » @lukris02 
+$118.88 USDC » @nameruse 
+$112.99 USDC » @fs0c 
+$92.54 USDC » @Breeje 
+$82.32 USDC » @fatherOfBlocks  
+$82.32 USDC » @latt1ce 
+$82.32 USDC » @camdengrieh 
+$82.32 USDC » @c3phas 
+$78.95 USDC » @Nyx 
+$78.95 USDC » @code-cipher 
+$78.73 USDC » @sk8erboy 
+$77.99 USDC » @Ch_301  
+$68.09 USDC » @cryptostellar5 
+$68.09 USDC » @Deivitto 
+$68.09 USDC » @minhtrng 
+$68.09 USDC » @PaludoX0 
+$67.13 USDC » @Manboy 
+$62.98 USDC » @gz627 
+$59.44 USDC » @mert_eren 
+$57.20 USDC » @nadin 
+$57.20 USDC » @Matin 
+$56.46 USDC » @nogo 
+$40.88 USDC » @kiki_dev 
+$40.88 USDC » @joestakey 
+$36.62 USDC » @HE1M 
+$36.62 USDC » @peanuts 
+$35.35 USDC » @0xNazgul 
+$34.75 USDC » @jadezti 
+$32.28 USDC » @dic0de  
+$21.71 USDC » @mookim 
+$21.71 USDC » @neumo 
+$21.71 USDC » @KmanOfficial 
+$21.71 USDC » @Czar102 
+$21.71 USDC » @hihen 
+$20.44 USDC » @Bnke
+
+{Reactions}
+🙏 
+
+[02/09/2023 19:41] 0xdeadbeef0x
+@Alex The Entreprenerd so many valid findings to judge! Thanks
+
+{Reactions}
+🎉 
+
+[02/09/2023 19:41] camdengrieh
+Damn my name is missing 😢
+
+
+[02/09/2023 19:41] .daredev1l
+me too
+
+
+[02/09/2023 19:42] alextheentreprenerd
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/Screenshot_2023-02-09_at_20.41.59-9FB70.png
+
+{Reactions}
+🔥 (12) 🙇‍♂️ (3) 
+
+[02/09/2023 19:42] camdengrieh
+Thought i found a solid Med as well
+
+
+[02/09/2023 19:42] allarious
+@Alex The Entreprenerd Thank you!!! Thats crazy!
+
+
+[02/09/2023 19:43] kmanofficial
+Damn so many bugs, but first contest first medium 🤝
+
+{Reactions}
+hi5 (3) 
+
+[02/09/2023 19:44] supernovahs
+supernova,M-06,2,1,1.1390162376600004,10,0.11622614670000002,145.3016646007012,USDC,145.3
+
+
+[02/09/2023 19:44] supernovahs
+My name is not there
+
+
+[02/09/2023 19:45] camdengrieh
+Where is this from?
+
+
+[02/09/2023 19:45] supernovahs
+this
+
+
+[02/09/2023 19:45] camdengrieh
+Ah thanks
+
+
+[02/09/2023 19:46] camdengrieh
+Okay im on there thats cool
+
+
+[02/09/2023 19:46] wardenpsw
+I am on the csv but my name is also missing in the announcement :thisisfine:
+
+{Reactions}
+bog (2) 
+
+[02/09/2023 19:49] chaduke#3730
+congrats to all!
+
+{Reactions}
+Clap 
+
+[02/09/2023 19:55] camdengrieh
+What was yours related to? I reported an oracle issue
+
+
+[02/09/2023 19:56] saksham#7993
+I dont think you should discuss issues yet
+
+
+[02/09/2023 19:56] camdengrieh
+Cats out the bag now tho?
+
+
+[02/09/2023 19:56] saksham#7993
+report gotta be out first ig
+
+
+[02/09/2023 19:56] camdengrieh
+Hm okay
+
+
+[02/09/2023 19:57] ladboy233
+:chefskiss:
+
+
+[02/09/2023 19:57] camdengrieh
+Just curious what it was related to, cause I reported a number of things but i only see one
+
+
+[02/09/2023 19:58] itsmetechjay
+:C4Keycap:  💸 🎉 Awards for **GoGoPool**,  part 2:
+
+$17.37 USDC » @Faith 
+$17.37 USDC » @simon135 
+$14.91 USDC » @SEVEN 
+$14.91 USDC » @yongskiws 
+$14.91 USDC » @0xLad 
+$14.91 USDC » tonisives
+$14.91 USDC » Arbor-Finance (@namaskar 🙏 dAppling.network, @russell | dAppling.network)
+$14.91 USDC » @TomJ 
+$14.91 USDC » @Samater 
+$14.91 USDC » @Qeew 
+$14.91 USDC » @eierina 
+$14.30 USDC » @Atarpara 
+$9.93 USDC » @wallstreetvilkas 
+$9.93 USDC » @0xc0ffEE 
+$9.93 USDC » @Lirios 
+$9.93 USDC » @0xmint 
+$4.97 USDC » clems4ever
+$3.73 USDC » @WatchDogs 
+
+🏁 Findings summary
+---------------------------
+High risk findings: 101 total, 6 unique
+Med risk findings: 212 total, 22 unique
+Gas reports: 12 
+QA reports: 15 
+
+Awards will be distributed on Polygon within the next week. Congratulations, everyone! 💸 💸 💸
+
+*If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+👍 
+
+[02/09/2023 19:58] 0xdeadbeef0x
+When the report is out you will have access to your issues and can see why they were accepted/rejected
+
+{Reactions}
+👍 
+
+[02/09/2023 19:58] kmanofficial
+Yeah same I think I submitted more than 1 but I can’t remember
+
+
+[02/09/2023 19:58] camdengrieh
+Understood
+
+
+[02/09/2023 19:59] camdengrieh
+We cant challenge them tho right if we're not backstage?
+
+
+[02/09/2023 19:59] 0xdeadbeef0x
+Once the rewards are announced, they are final
+
+
+[02/09/2023 20:00] camdengrieh
+I see
+
+
+[02/09/2023 20:00] camdengrieh
+Thanks btw
+
+{Reactions}
+🫡 
+
+[02/09/2023 20:07] bookland
+so happy to win a huge reward ! big props to the team @memerson
+
+{Reactions}
+hi5 (3) 🫰 (3) 
+
+[02/09/2023 20:11] ladboy233
+This is the last reward in 2022. Quite a year for C4.
+
+
+[02/09/2023 20:11] ladboy233
+Only regret not to discover C4 earlier. but it is never too late!
+
+{Reactions}
+hi5 (3) 💜 (3) chefskiss (2) 
+
+[02/09/2023 20:12] ladboy233
+https://tenor.com/view/lets-go-gif-22712392
+
+{Embed}
+https://tenor.com/view/lets-go-gif-22712392
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/lets-go-A9090.png
+
+
+[02/09/2023 20:14] bookland
+how can i see the results? can someone please point me towards the solutions
+
+
+[02/09/2023 20:39] cloudellie
+I see you in there. @supernova too. Am I missing something? Or was this resolved between original announcement and now?
+
+
+[02/09/2023 20:39] supernovahs
+Latter one
+
+{Reactions}
+👍 
+
+[02/09/2023 20:44] itsmetechjay
+The copy/paste gods were not shining on me for that original post.  🙈
+
+{Reactions}
+empathy (2) 
+
+[02/09/2023 20:44] ustas.eth
+Don't see my name either :ohno:
+
+
+[02/09/2023 20:46] 0xWeiss#1412
+How can you see the list of all  the findings and the decisions?
+
+
+[02/09/2023 20:46] itsmetechjay
+@russell | dAppling.network @0xWeiss you will be able to see the results, decisions once the report is published and the findings repo is made public.
+
+
+[02/10/2023 03:38] akshaysrivastav
+Judging so many issues and resolving all queries must have been very hard. Great job @Alex The Entreprenerd 🙌
+
+
+[02/10/2023 03:39] CharlesPal#0309
+7th place for first contest and 60% coverage is decent I think?
+
+
+[02/10/2023 05:05] kartika___
+@unforgiven Congratulations on discovering the vulnerability and coming out on top in the competition!
+
+{Reactions}
+🙏 
+
+[02/11/2023 13:35] 0xWeiss#1412
+Hey Jay! Can you please check DMs
+
+{Reactions}
+checkmark 
+
+[02/25/2023 20:20] bookland
+hi. is there an ETA on this?
+
+
+[03/09/2023 04:09] bookland
+@memerson @ju1ie | gogopool 
+
+Hello everyone, I hope you're all doing well. I was just wondering if there's a way to view the results of the bug bounty? I'm really excited to learn from the results and see what vulnerabilities were discovered.
+
+I also wanted to take a moment to thank all the fellow participants who took part in the bounty. Your hard work and dedication are truly appreciated. Together, we made gogopool more secure and helped protect users. Thank you all for your efforts!
+
+{Reactions}
+👍 (2) 
+
+[03/09/2023 07:00] hashTheBlocks#3428
+Hi ,any updates on the report,when can we see it ? !
+
+
+[03/09/2023 11:33] cloudellie
+C4 staff will publish the report on the code4rena.com website when it's ready for publication. It's in progress, but the sponsor team was running a mitigation review prior to publication.
+
+{Reactions}
+➕ 
+
+[03/27/2023 16:24] ju1ie
+Thank you everyone for reviewing our code!
+Final report: https://code4rena.com/reports/2022-12-gogopool/
+
+{Embed}
+https://code4rena.com/reports/2022-12-gogopool/
+GoGoPool contest
+The future of audits is decentralized.
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/c4-og-banner-0FCFA.png
+
+{Reactions}
+596058680408145921 (4) cheers_badger (5) chefskiss (9) praisethesun (4) 
+
+[03/29/2023 20:22] Aramas#0972
+Hi all! @Alex The Entreprenerd and myself are thinking of hosting an Office Hours session to go over this competition. If you're a Warden who participated that would like to talk through your findings with us (to ask questions, see how you could've improved the submission etc) live in the session, please react with a 👋🏻  emoji.
+
+{Reactions}
+👋🏻 (4) 🙌 
+
+[03/30/2023 01:25] ladboy233
+https://tenor.com/view/lets-go-gif-22712392
+
+{Embed}
+https://tenor.com/view/lets-go-gif-22712392
+Code4rena - ARCHIVE-Q4-2022 - gogopool-dec15 [1052967326502363146].txt_Files/lets-go-A9090.png
+
+
+[03/30/2023 12:18] alextheentreprenerd
+If you know you can't make it to the live, feel free to drop your finding and questions in this thread, we'll address them after talking to the people that join live
+
+
+[04/11/2023 05:07] hashTheBlocks#3428
+Hi @Alex The Entreprenerd , we have participated in gogopool contest as team by name "Web3Tech_Team" .But we do not find our name in warden list.We shared gas related findings.We had participated in 2-3 more contest.But our name never came in participated warden list.Maybe something wrong we are doing while submiting the  GAS FINDING report which we should be aware of? Is it true that while submitting the GAS related finding we have to mention like how much GAS we are saving ? (reference : https://medium.com/coinsbench/not-all-gas-optimization-audit-reports-get-accepted-in-code4rena-follow-this-tips-to-make-sure-69aabb4622ca)
+
+{Embed}
+https://medium.com/coinsbench/not-all-gas-optimization-audit-reports-get-accepted-in-code4rena-follow-this-tips-to-make-sure-69aabb4622ca)
+
+
+[04/11/2023 07:40] alextheentreprenerd
+In order for your report to be awarded you must receive a B score, that is dependent on the quality and amount of savings that other reports offer, you should go in the report and compare yours with other that have been awarded
+
+
+[04/11/2023 07:41] alextheentreprenerd
+You can also check Office Hours which we did for this contest:
+https://www.youtube.com/watch?v=Rd2eCjwrjjI&
+
+As well as a previous one in which we talk about judging criteria:
+https://www.youtube.com/watch?v=MwksBCj025s
+
+
+[04/11/2023 11:27] hashTheBlocks#3428
+oh ok thanks...will look into it
+
+
+==============================================================
+Exported 288 message(s)
+==============================================================
